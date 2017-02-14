@@ -30,6 +30,7 @@ PODS:
   - RxSwift (3.2.0)
   - RxSwiftExt (2.1.0):
     - RxSwift (~> 3.0)
+  - SnapKit (3.1.2)
 
 DEPENDENCIES:
   - Moya/RxSwift (= 8.0.2)
@@ -40,6 +41,7 @@ DEPENDENCIES:
   - R.swift (= 3.2.0)
   - RxCocoa (= 3.0.1)
   - RxSwiftExt (= 2.1.0)
+  - SnapKit (= 3.1.2)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -55,7 +57,8 @@ SPEC CHECKSUMS:
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxSwiftExt: 492a6575cf6afabb8feeed3204bd0f9e2c695e67
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
 
-PODFILE CHECKSUM: 3739faa7dea90a058075d6a00f477b06b05c0e6a
+PODFILE CHECKSUM: c4ecd4fe661716b420eb3e82d138cfb0d98f7f33
 
 COCOAPODS: 1.1.1
