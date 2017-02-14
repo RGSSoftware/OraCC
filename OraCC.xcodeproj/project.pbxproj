@@ -12,6 +12,7 @@
 		22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521A1E52A0BF00038A12 /* Main.storyboard */; };
 		22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521D1E52A0BF00038A12 /* Assets.xcassets */; };
 		22CA52211E52A0BF00038A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */; };
+		22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA525D1E538B6800038A12 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		22CA52221E52A0BF00038A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CA52271E52A0BF00038A12 /* OraCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OraCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA522D1E52A0BF00038A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22CA525D1E538B6800038A12 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
 				22CA52181E52A0BF00038A12 /* ViewController.swift */,
 				22CA521A1E52A0BF00038A12 /* Main.storyboard */,
+				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
 				22CA521D1E52A0BF00038A12 /* Assets.xcassets */,
 				22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */,
 				22CA52221E52A0BF00038A12 /* Info.plist */,
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
 				22CA52191E52A0BF00038A12 /* ViewController.swift in Sources */,
 				22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */,
 			);
