@@ -10,7 +10,12 @@ target 'OraCC' do
 
   target 'OraCCTests' do
     inherit! :search_paths
+    
     # Pods for testing
+    
+    pod 'Quick', '1.1.0'
+    pod 'Nimble', '6.0.1'
+    pod 'Nimble-Snapshots', '4.4.0'
   end
 
 end

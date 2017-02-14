@@ -1,13 +1,26 @@
 PODS:
   - Alamofire (4.3.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
   - Moya/Core (8.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Moya/RxSwift (8.0.2):
     - Moya/Core
     - RxSwift (~> 3.0)
+  - Nimble (6.0.1)
+  - Nimble-Snapshots (4.4.0):
+    - Nimble-Snapshots/Core (= 4.4.0)
+  - Nimble-Snapshots/Core (4.4.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
   - NSObject+Rx (2.0.0):
     - RxSwift
+  - Quick (1.1.0)
   - Result (3.1.0)
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
@@ -17,19 +30,26 @@ PODS:
 
 DEPENDENCIES:
   - Moya/RxSwift (= 8.0.2)
+  - Nimble (= 6.0.1)
+  - Nimble-Snapshots (= 4.4.0)
   - NSObject+Rx (= 2.0.0)
+  - Quick (= 1.1.0)
   - RxCocoa (= 3.0.1)
   - RxSwiftExt (= 2.1.0)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
+  Nimble: 1527fd1bd2b4cf0636251a36bc8ab37e81da8347
+  Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   NSObject+Rx: 2a9cd801d9c847e6d2486cbad8d7701b67834e70
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxSwiftExt: 492a6575cf6afabb8feeed3204bd0f9e2c695e67
 
-PODFILE CHECKSUM: 3f13bb1e30f15a163d64f7a9a92b096bbd1a070b
+PODFILE CHECKSUM: f722e942642dc18a55b0aed90dc510c942c4acb4
 
 COCOAPODS: 1.1.1
