@@ -7,6 +7,7 @@ target 'OraCC' do
   pod 'NSObject+Rx', '2.0.0'
   pod 'RxCocoa', '3.0.1'
   pod 'RxSwiftExt', '2.1.0'
+  pod 'R.swift', '3.2.0'
 
   target 'OraCCTests' do
     inherit! :search_paths

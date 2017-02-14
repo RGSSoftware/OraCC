@@ -21,6 +21,9 @@ PODS:
   - NSObject+Rx (2.0.0):
     - RxSwift
   - Quick (1.1.0)
+  - R.swift (3.2.0):
+    - R.swift.Library (~> 3.0.2)
+  - R.swift.Library (3.0.2)
   - Result (3.1.0)
   - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
@@ -34,6 +37,7 @@ DEPENDENCIES:
   - Nimble-Snapshots (= 4.4.0)
   - NSObject+Rx (= 2.0.0)
   - Quick (= 1.1.0)
+  - R.swift (= 3.2.0)
   - RxCocoa (= 3.0.1)
   - RxSwiftExt (= 2.1.0)
 
@@ -45,11 +49,13 @@ SPEC CHECKSUMS:
   Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
   NSObject+Rx: 2a9cd801d9c847e6d2486cbad8d7701b67834e70
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  R.swift: 207a372a2b5977caef440c696a368009460641d1
+  R.swift.Library: fbdec16c9802ad104fc1ba53415dc190e6ec5c73
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   RxSwiftExt: 492a6575cf6afabb8feeed3204bd0f9e2c695e67
 
-PODFILE CHECKSUM: f722e942642dc18a55b0aed90dc510c942c4acb4
+PODFILE CHECKSUM: 3739faa7dea90a058075d6a00f477b06b05c0e6a
 
 COCOAPODS: 1.1.1
