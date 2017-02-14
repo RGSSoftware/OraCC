@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA52161E52A0BF00038A12 /* AppDelegate.swift */; };
-		22CA52191E52A0BF00038A12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA52181E52A0BF00038A12 /* ViewController.swift */; };
 		22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521A1E52A0BF00038A12 /* Main.storyboard */; };
 		22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521D1E52A0BF00038A12 /* Assets.xcassets */; };
 		22CA52211E52A0BF00038A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */; };
@@ -28,7 +27,6 @@
 /* Begin PBXFileReference section */
 		22CA52131E52A0BF00038A12 /* OraCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA52161E52A0BF00038A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22CA52181E52A0BF00038A12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22CA521B1E52A0BF00038A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22CA521D1E52A0BF00038A12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22CA52201E52A0BF00038A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
-				22CA52181E52A0BF00038A12 /* ViewController.swift */,
 				22CA521A1E52A0BF00038A12 /* Main.storyboard */,
 				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
 				22CA521D1E52A0BF00038A12 /* Assets.xcassets */,
@@ -200,7 +197,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
-				22CA52191E52A0BF00038A12 /* ViewController.swift in Sources */,
 				22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
