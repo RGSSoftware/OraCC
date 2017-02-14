@@ -12,6 +12,8 @@
 		22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521D1E52A0BF00038A12 /* Assets.xcassets */; };
 		22CA52211E52A0BF00038A12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */; };
 		22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA525D1E538B6800038A12 /* SplashViewController.swift */; };
+		22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */; };
+		22CA52621E53AB2000038A12 /* AuthenticationTokenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA52611E53AB2000038A12 /* AuthenticationTokenSpec.swift */; };
 		D98D0D69AD7DE656E4767D32 /* Pods_OraCC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1EBBC2FC269FD96C897D5D /* Pods_OraCC.framework */; };
 		EE1A240FF361B70FA5627530 /* Pods_OraCCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88B7E9F210CE710F6A18265A /* Pods_OraCCTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		22CA52271E52A0BF00038A12 /* OraCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OraCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA522D1E52A0BF00038A12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22CA525D1E538B6800038A12 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationToken.swift; sourceTree = "<group>"; };
+		22CA52611E53AB2000038A12 /* AuthenticationTokenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationTokenSpec.swift; sourceTree = "<group>"; };
 		42BA950D781316503C1DCEFE /* Pods-OraCC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraCC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OraCC/Pods-OraCC.debug.xcconfig"; sourceTree = "<group>"; };
 		7B1EBBC2FC269FD96C897D5D /* Pods_OraCC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OraCC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B7E9F210CE710F6A18265A /* Pods_OraCCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OraCCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,7 @@
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
 				22CA521A1E52A0BF00038A12 /* Main.storyboard */,
 				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
+				22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */,
 				22CA521D1E52A0BF00038A12 /* Assets.xcassets */,
 				22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */,
 				22CA52221E52A0BF00038A12 /* Info.plist */,
@@ -111,6 +116,7 @@
 		22CA522A1E52A0BF00038A12 /* OraCCTests */ = {
 			isa = PBXGroup;
 			children = (
+				22CA52611E53AB2000038A12 /* AuthenticationTokenSpec.swift */,
 				22CA522D1E52A0BF00038A12 /* Info.plist */,
 			);
 			path = OraCCTests;
@@ -185,6 +191,7 @@
 					};
 					22CA52261E52A0BF00038A12 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 22CA52121E52A0BF00038A12;
 					};
@@ -328,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
+				22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */,
 				22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CA52621E53AB2000038A12 /* AuthenticationTokenSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,10 +503,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OraCCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Software.OraCCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OraCC.app/OraCC";
 			};
@@ -509,6 +520,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OraCCTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Software.OraCCTests;
@@ -537,6 +549,7 @@
 				22CA52321E52A0BF00038A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22CA52331E52A0BF00038A12 /* Build configuration list for PBXNativeTarget "OraCCTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +558,7 @@
 				22CA52351E52A0BF00038A12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
