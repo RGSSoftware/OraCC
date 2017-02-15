@@ -21,8 +21,17 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 0 files.
+  /// This `R.file` struct is generated, and contains static references to 1 files.
   struct file {
+    /// Resource file `Login_Sample_Data.json`.
+    static let login_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Login_Sample_Data", pathExtension: "json")
+    
+    /// `bundle.url(forResource: "Login_Sample_Data", withExtension: "json")`
+    static func login_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.login_Sample_DataJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
     fileprivate init() {}
   }
   
@@ -49,8 +58,11 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 0 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `FieldCell`.
+    static let fieldCell: Rswift.ReuseIdentifier<FieldCell> = Rswift.ReuseIdentifier(identifier: "FieldCell")
+    
     fileprivate init() {}
   }
   
@@ -153,10 +165,16 @@ struct _R: Rswift.Validatable {
       typealias InitialController = SplashViewController
       
       let bundle = R.hostingBundle
+      let loginViewController = StoryboardViewControllerResource<LoginViewController>(identifier: "LoginViewController")
       let name = "Main"
+      
+      func loginViewController(_: Void = ()) -> LoginViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: loginViewController)
+      }
       
       static func validate() throws {
         if UIKit.UIImage(named: "Splash") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Splash' is used in storyboard 'Main', but couldn't be loaded.") }
+        if _R.storyboard.main().loginViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginViewController' could not be loaded from storyboard 'Main' as 'LoginViewController'.") }
       }
       
       fileprivate init() {}

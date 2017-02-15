@@ -42,34 +42,42 @@
             </objects>
             <point key="canvasLocation" x="-159.19999999999999" y="271.21439280359823"/>
         </scene>
-        <!--Login-->
+        <!--OraChat-->
         <scene sceneID="z6O-Z3-glK">
             <objects>
-                <tableViewController id="Sw2-HH-2Cg" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="09U-M4-Nxp">
+                <tableViewController storyboardIdentifier="LoginViewController" id="Sw2-HH-2Cg" customClass="LoginViewController" customModule="OraCC" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="09U-M4-Nxp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hjO-UD-gMh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FieldCell" id="vEy-Sg-4hx" customClass="FieldCell" customModule="OraCC" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hjO-UD-gMh" id="ccd-mb-T6J">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vEy-Sg-4hx" id="yJo-C1-QZH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Sw2-HH-2Cg" id="aV7-bk-F3W"/>
                             <outlet property="delegate" destination="Sw2-HH-2Cg" id="GNH-eE-YYR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Login" id="aay-93-3Ws"/>
+                    <navigationItem key="navigationItem" title="OraChat" id="fHt-x3-OhW">
+                        <barButtonItem key="leftBarButtonItem" title="Register" id="qfx-aS-BR4">
+                            <color key="tintColor" red="0.96470588239999999" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="EYk-pF-c41">
+                            <color key="tintColor" red="0.96470588235294119" green="0.68627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4t1-oX-ZvJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="271"/>
+            <point key="canvasLocation" x="1668" y="270.31484257871068"/>
         </scene>
         <!--Chats-->
         <scene sceneID="vIA-HZ-0c3">
@@ -84,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Is4-Zn-EGJ" id="GHw-hl-mxJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

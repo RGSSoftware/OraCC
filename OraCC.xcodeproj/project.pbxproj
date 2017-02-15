@@ -7,11 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225C11501E54EEEC00062B2A /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C114F1E54EEEC00062B2A /* LoginViewControllerSpec.swift */; };
+		225C11521E54F03900062B2A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* Validator.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
 		2260A8A81E54BA750083D59E /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A71E54BA750083D59E /* PasswordValidator.swift */; };
 		2260A8AA1E54BA980083D59E /* PasswordValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A91E54BA980083D59E /* PasswordValidatorSpec.swift */; };
+		2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8AB1E54C30F0083D59E /* LoginViewController.swift */; };
+		2260A8AE1E54C30F0083D59E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8AC1E54C30F0083D59E /* LoginViewModel.swift */; };
+		2260A8B01E54C31D0083D59E /* FieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8AF1E54C31D0083D59E /* FieldCell.swift */; };
+		2260A8B21E54C4070083D59E /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8B11E54C4070083D59E /* Field.swift */; };
+		2260A8B41E54C4280083D59E /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8B31E54C4280083D59E /* LoginForm.swift */; };
+		2260A8B61E54C4E70083D59E /* OraAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8B51E54C4E70083D59E /* OraAPI.swift */; };
+		2260A8B81E54C7060083D59E /* Login_Sample_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2260A8B71E54C7060083D59E /* Login_Sample_Data.json */; };
 		22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA52161E52A0BF00038A12 /* AppDelegate.swift */; };
 		22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521A1E52A0BF00038A12 /* Main.storyboard */; };
 		22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521D1E52A0BF00038A12 /* Assets.xcassets */; };
@@ -37,11 +46,20 @@
 /* Begin PBXFileReference section */
 		04D5AF771864B6B2E23AE213 /* Pods-OraCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraCC/Pods-OraCC.release.xcconfig"; sourceTree = "<group>"; };
 		219B83EC6E3CC8DB7BF1FB13 /* Pods-OraCCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraCCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraCCTests/Pods-OraCCTests.release.xcconfig"; sourceTree = "<group>"; };
+		225C114F1E54EEEC00062B2A /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
+		225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		2260A8A71E54BA750083D59E /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		2260A8A91E54BA980083D59E /* PasswordValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidatorSpec.swift; sourceTree = "<group>"; };
+		2260A8AB1E54C30F0083D59E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2260A8AC1E54C30F0083D59E /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		2260A8AF1E54C31D0083D59E /* FieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldCell.swift; sourceTree = "<group>"; };
+		2260A8B11E54C4070083D59E /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		2260A8B31E54C4280083D59E /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		2260A8B51E54C4E70083D59E /* OraAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OraAPI.swift; sourceTree = "<group>"; };
+		2260A8B71E54C7060083D59E /* Login_Sample_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Login_Sample_Data.json; sourceTree = "<group>"; };
 		22CA52131E52A0BF00038A12 /* OraCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA52161E52A0BF00038A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22CA521B1E52A0BF00038A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,14 +132,22 @@
 		22CA52151E52A0BF00038A12 /* OraCC */ = {
 			isa = PBXGroup;
 			children = (
+				225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */,
 				22CA52641E53B09700038A12 /* R.generated.swift */,
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
 				2260A8A31E54B78E0083D59E /* Validator.swift */,
 				2260A8A51E54B7D00083D59E /* EmailValidator.swift */,
+				2260A8AB1E54C30F0083D59E /* LoginViewController.swift */,
+				2260A8AC1E54C30F0083D59E /* LoginViewModel.swift */,
+				2260A8B51E54C4E70083D59E /* OraAPI.swift */,
+				2260A8B31E54C4280083D59E /* LoginForm.swift */,
+				2260A8B11E54C4070083D59E /* Field.swift */,
 				22CA521A1E52A0BF00038A12 /* Main.storyboard */,
+				2260A8AF1E54C31D0083D59E /* FieldCell.swift */,
 				2260A8A71E54BA750083D59E /* PasswordValidator.swift */,
 				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
 				22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */,
+				2260A8B71E54C7060083D59E /* Login_Sample_Data.json */,
 				22CA521D1E52A0BF00038A12 /* Assets.xcassets */,
 				22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */,
 				22CA52221E52A0BF00038A12 /* Info.plist */,
@@ -132,6 +158,7 @@
 		22CA522A1E52A0BF00038A12 /* OraCCTests */ = {
 			isa = PBXGroup;
 			children = (
+				225C114F1E54EEEC00062B2A /* LoginViewControllerSpec.swift */,
 				2260A8A91E54BA980083D59E /* PasswordValidatorSpec.swift */,
 				2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */,
 				22CA52611E53AB2000038A12 /* AuthenticationTokenSpec.swift */,
@@ -241,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22CA52211E52A0BF00038A12 /* LaunchScreen.storyboard in Resources */,
+				2260A8B81E54C7060083D59E /* Login_Sample_Data.json in Resources */,
 				22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */,
 				22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */,
 			);
@@ -371,9 +399,16 @@
 				2260A8A41E54B78E0083D59E /* Validator.swift in Sources */,
 				2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */,
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
+				2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */,
 				22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */,
+				225C11521E54F03900062B2A /* UIViewControllerExtensions.swift in Sources */,
 				22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */,
+				2260A8B41E54C4280083D59E /* LoginForm.swift in Sources */,
+				2260A8B61E54C4E70083D59E /* OraAPI.swift in Sources */,
 				22CA52651E53B09700038A12 /* R.generated.swift in Sources */,
+				2260A8B01E54C31D0083D59E /* FieldCell.swift in Sources */,
+				2260A8AE1E54C30F0083D59E /* LoginViewModel.swift in Sources */,
+				2260A8B21E54C4070083D59E /* Field.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +419,7 @@
 				2260A8AA1E54BA980083D59E /* PasswordValidatorSpec.swift in Sources */,
 				2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */,
 				22CA52621E53AB2000038A12 /* AuthenticationTokenSpec.swift in Sources */,
+				225C11501E54EEEC00062B2A /* LoginViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
