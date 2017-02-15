@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
+		2260A8A41E54B78E0083D59E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* Validator.swift */; };
+		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
 		22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA52161E52A0BF00038A12 /* AppDelegate.swift */; };
 		22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521A1E52A0BF00038A12 /* Main.storyboard */; };
 		22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521D1E52A0BF00038A12 /* Assets.xcassets */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		04D5AF771864B6B2E23AE213 /* Pods-OraCC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraCC.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraCC/Pods-OraCC.release.xcconfig"; sourceTree = "<group>"; };
 		219B83EC6E3CC8DB7BF1FB13 /* Pods-OraCCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraCCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraCCTests/Pods-OraCCTests.release.xcconfig"; sourceTree = "<group>"; };
+		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
+		2260A8A31E54B78E0083D59E /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		22CA52131E52A0BF00038A12 /* OraCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA52161E52A0BF00038A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22CA521B1E52A0BF00038A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +112,8 @@
 			children = (
 				22CA52641E53B09700038A12 /* R.generated.swift */,
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
+				2260A8A31E54B78E0083D59E /* Validator.swift */,
+				2260A8A51E54B7D00083D59E /* EmailValidator.swift */,
 				22CA521A1E52A0BF00038A12 /* Main.storyboard */,
 				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
 				22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */,
@@ -119,6 +127,7 @@
 		22CA522A1E52A0BF00038A12 /* OraCCTests */ = {
 			isa = PBXGroup;
 			children = (
+				2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */,
 				22CA52611E53AB2000038A12 /* AuthenticationTokenSpec.swift */,
 				22CA522D1E52A0BF00038A12 /* Info.plist */,
 			);
@@ -352,6 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2260A8A41E54B78E0083D59E /* Validator.swift in Sources */,
+				2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */,
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
 				22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */,
 				22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */,
@@ -363,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */,
 				22CA52621E53AB2000038A12 /* AuthenticationTokenSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
