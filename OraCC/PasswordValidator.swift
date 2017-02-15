@@ -14,4 +14,8 @@ struct PasswordValidator: Validator {
             isValid = validator(value)
         }
     }
+    
+    var errorMessage: String {
+        return "Invalid password."
+    }
 }

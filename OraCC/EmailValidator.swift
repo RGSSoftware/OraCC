@@ -13,4 +13,8 @@ class EmailValidator: Validator {
             isValid = validator(value)
         }
     }
+    
+    var errorMessage: String {
+        return "Invalid email."
+    }
 }
