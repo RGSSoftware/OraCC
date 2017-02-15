@@ -30,6 +30,10 @@ class LoginViewModel: NSObject {
         
         return .none
     }
+    
+    func login() {
+        
+    }
 
 }
 

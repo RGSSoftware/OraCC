@@ -13,6 +13,9 @@ class LoginViewController: UITableViewController {
         
         tableView.tableFooterView = UIView()
     }
+    @IBAction func login(_ sender: Any) {
+        viewModel.login()
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfFields

@@ -72,6 +72,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Login" id="EYk-pF-c41">
                             <color key="tintColor" red="0.96470588235294119" green="0.68627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="login:" destination="Sw2-HH-2Cg" id="uTs-Kr-sb3"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
