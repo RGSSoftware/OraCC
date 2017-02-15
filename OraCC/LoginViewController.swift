@@ -12,6 +12,15 @@ class LoginViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
+        
+        viewModel.showMessage.subscribe(onNext:{ [weak self] message in
+            let alert = UIAlertController(title: message.title, message: message.body, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            
+            self?.present(alert, animated: true){}
+        
+        }).addDisposableTo(rx_disposeBag)
     }
     @IBAction func login(_ sender: Any) {
         viewModel.login()

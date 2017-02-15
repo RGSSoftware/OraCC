@@ -3,6 +3,11 @@ import Moya
 import RxSwift
 import NSObject_Rx
 
+struct Message {
+    let title: String
+    let body: String
+}
+
 class LoginViewModel: NSObject {
     internal let provider: RxMoyaProvider<OraAPI>
     
@@ -11,6 +16,8 @@ class LoginViewModel: NSObject {
     var numberOfFields: Int {
         return form.fields.count
     }
+
+    var showMessage = PublishSubject<Message>()
     
     init(provider: RxMoyaProvider<OraAPI>){
         self.provider = provider
@@ -32,7 +39,11 @@ class LoginViewModel: NSObject {
     }
     
     func login() {
-        
+        if !form.isValid{
+            if let field = form.firstInvalidField() {
+                showMessage.onNext(Message(title: field.label, body: field.validator.errorMessage))
+            }
+        }
     }
 
 }

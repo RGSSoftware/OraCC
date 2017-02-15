@@ -18,6 +18,10 @@ struct LoginForm {
         return fields.map{$0.validator.isValid}.reduceAnd()
     }
     
+    func firstInvalidField() -> Field? {
+        return fields.filter{$0.validator.isValid == false }.first
+    }
+    
     func field(_ type: FieldType) -> Field? {
         return fields.filter{$0.fieldType == type }.first
     }
