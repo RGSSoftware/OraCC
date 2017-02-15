@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		225C11501E54EEEC00062B2A /* LoginViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C114F1E54EEEC00062B2A /* LoginViewControllerSpec.swift */; };
 		225C11521E54F03900062B2A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */; };
+		225C11541E54FDAC00062B2A /* FormSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11531E54FDAC00062B2A /* FormSpec.swift */; };
+		225C11561E54FECE00062B2A /* Sequence+Exten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11551E54FECE00062B2A /* Sequence+Exten.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* Validator.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -48,6 +50,8 @@
 		219B83EC6E3CC8DB7BF1FB13 /* Pods-OraCCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OraCCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OraCCTests/Pods-OraCCTests.release.xcconfig"; sourceTree = "<group>"; };
 		225C114F1E54EEEC00062B2A /* LoginViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSpec.swift; sourceTree = "<group>"; };
 		225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		225C11531E54FDAC00062B2A /* FormSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSpec.swift; sourceTree = "<group>"; };
+		225C11551E54FECE00062B2A /* Sequence+Exten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Exten.swift"; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		22CA52151E52A0BF00038A12 /* OraCC */ = {
 			isa = PBXGroup;
 			children = (
+				225C11551E54FECE00062B2A /* Sequence+Exten.swift */,
 				225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */,
 				22CA52641E53B09700038A12 /* R.generated.swift */,
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
@@ -158,6 +163,7 @@
 		22CA522A1E52A0BF00038A12 /* OraCCTests */ = {
 			isa = PBXGroup;
 			children = (
+				225C11531E54FDAC00062B2A /* FormSpec.swift */,
 				225C114F1E54EEEC00062B2A /* LoginViewControllerSpec.swift */,
 				2260A8A91E54BA980083D59E /* PasswordValidatorSpec.swift */,
 				2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */,
@@ -408,6 +414,7 @@
 				22CA52651E53B09700038A12 /* R.generated.swift in Sources */,
 				2260A8B01E54C31D0083D59E /* FieldCell.swift in Sources */,
 				2260A8AE1E54C30F0083D59E /* LoginViewModel.swift in Sources */,
+				225C11561E54FECE00062B2A /* Sequence+Exten.swift in Sources */,
 				2260A8B21E54C4070083D59E /* Field.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +427,7 @@
 				2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */,
 				22CA52621E53AB2000038A12 /* AuthenticationTokenSpec.swift in Sources */,
 				225C11501E54EEEC00062B2A /* LoginViewControllerSpec.swift in Sources */,
+				225C11541E54FDAC00062B2A /* FormSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
