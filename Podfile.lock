@@ -48,7 +48,7 @@ DEPENDENCIES:
   - RxSwiftExt (= 2.1.0)
   - SnapKit (= 3.1.2)
   - SVProgressHUD (= 2.1)
-  - UIColor_Hex_Swift (~> 3.0.2)
+  - UIColor_Hex_Swift (= 3.0.2)
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
@@ -68,6 +68,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 76eacbf6f547ee13b3b25e2fb42b52d4cad76112
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 5690125a9989dadf01383ae5d4115bdf4de8560b
+PODFILE CHECKSUM: 9f75bb57ab7b69e6a1113557073f2900ec7db605
 
 COCOAPODS: 1.1.1
