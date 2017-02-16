@@ -19,6 +19,10 @@ class LoginViewModel: NSObject {
     
     var showMessage = PublishSubject<Message>()
     
+    var showSpinner = PublishSubject<Bool>()
+    
+    var didLoginSuccessful = PublishSubject<Void>()
+    
     init(provider: RxMoyaProvider<OraAPI>){
         self.provider = provider
         
@@ -38,6 +42,38 @@ class LoginViewModel: NSObject {
                 showMessage.onNext(Message(title: field.label, body: field.validator.errorMessage))
             }
         }
+        
+        showSpinner.onNext(true)
+        
+        let email = formViewModel.form.field(.email)!.value!
+        let password = formViewModel.form.field(.password)!.value!
+        
+        provider.request(.login(email: email, password: password)).subscribe(onNext:{ [weak self] response in
+            
+            self?.showSpinner.onNext(false)
+            
+            switch response.responseStatusCode{
+            case .success:
+                
+                if let urlResponse = response.response as? HTTPURLResponse {
+                    
+                    if let authorization = urlResponse.allHeaderFields["Authorization"] as? String{
+                        AuthenticationToken.token = authorization
+                    }
+                }
+                
+                self?.didLoginSuccessful.onNext()
+                
+            case .clientError:
+                self?.showMessage.onNext(Message(title: "Register Error", body: "Please check your submitted info and try again."))
+            case .serverError,
+                 .informational,
+                 .undefined:
+                self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+            default:()
+            }
+            
+        }).addDisposableTo(rx_disposeBag)
     }
 
 }

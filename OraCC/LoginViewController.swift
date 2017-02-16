@@ -1,5 +1,7 @@
 import UIKit
 import Moya
+import SVProgressHUD
+
 
 class LoginViewController: UITableViewController {
     
@@ -20,6 +22,19 @@ class LoginViewController: UITableViewController {
             
             self?.present(alert, animated: true){}
         
+        }).addDisposableTo(rx_disposeBag)
+        
+        viewModel.showSpinner.subscribe(onNext:{
+            if $0 {
+                SVProgressHUD.show()
+            } else {
+                SVProgressHUD.dismiss()
+            }
+            
+        }).addDisposableTo(rx_disposeBag)
+        
+        viewModel.didLoginSuccessful.subscribe(onNext:{ [weak self] in
+            self?.dismiss(animated: true){}
         }).addDisposableTo(rx_disposeBag)
     }
     
