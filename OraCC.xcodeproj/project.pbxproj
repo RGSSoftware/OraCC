@@ -15,6 +15,7 @@
 		225C115F1E554BF700062B2A /* RegisterForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C115E1E554BF700062B2A /* RegisterForm.swift */; };
 		225C11611E554CBD00062B2A /* TextValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11601E554CBD00062B2A /* TextValidator.swift */; };
 		225C11631E554D6400062B2A /* TextValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11621E554D6400062B2A /* TextValidatorSpec.swift */; };
+		225C11651E55549300062B2A /* FormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11641E55549300062B2A /* FormRepresentable.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* Validator.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -60,6 +61,7 @@
 		225C115E1E554BF700062B2A /* RegisterForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterForm.swift; sourceTree = "<group>"; };
 		225C11601E554CBD00062B2A /* TextValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextValidator.swift; sourceTree = "<group>"; };
 		225C11621E554D6400062B2A /* TextValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextValidatorSpec.swift; sourceTree = "<group>"; };
+		225C11641E55549300062B2A /* FormRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				225C115C1E554B0F00062B2A /* Sample Data */,
 				22CA52641E53B09700038A12 /* R.generated.swift */,
 				2260A8B51E54C4E70083D59E /* OraAPI.swift */,
+				225C11641E55549300062B2A /* FormRepresentable.swift */,
 				2260A8B31E54C4280083D59E /* LoginForm.swift */,
 				225C115E1E554BF700062B2A /* RegisterForm.swift */,
 				2260A8B11E54C4070083D59E /* Field.swift */,
@@ -468,6 +471,7 @@
 				22CA52651E53B09700038A12 /* R.generated.swift in Sources */,
 				2260A8B01E54C31D0083D59E /* FieldCell.swift in Sources */,
 				2260A8AE1E54C30F0083D59E /* LoginViewModel.swift in Sources */,
+				225C11651E55549300062B2A /* FormRepresentable.swift in Sources */,
 				225C11561E54FECE00062B2A /* Sequence+Exten.swift in Sources */,
 				225C11611E554CBD00062B2A /* TextValidator.swift in Sources */,
 				2260A8B21E54C4070083D59E /* Field.swift in Sources */,
