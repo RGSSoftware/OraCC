@@ -23,6 +23,13 @@ class LoginViewController: UITableViewController {
         }).addDisposableTo(rx_disposeBag)
     }
     @IBAction func login(_ sender: Any) {
+        
+        let paths = tableView.indexPathsForVisibleRows
+        paths?.forEach{ [weak self] index in
+            let cell = self?.tableView.cellForRow(at: index) as! FieldCell
+            cell.textField.resignFirstResponder()
+        }
+        
         viewModel.login()
     }
     
@@ -35,5 +42,14 @@ class LoginViewController: UITableViewController {
         cell?.viewModel = viewModel.fieldViewModelForIndexPath(indexPath)!
         
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        let cell = tableView.cellForRow(at: indexPath) as! FieldCell
+        cell.viewModel = viewModel.fieldViewModelForIndexPath(indexPath)!
+        cell.textField.becomeFirstResponder()
+        
     }
 }
