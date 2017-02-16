@@ -25,4 +25,15 @@ class FieldViewModel: NSObject {
             self.field.value = $0
         }).addDisposableTo(rx_disposeBag)
     }
+    
+    var isSecure: Bool{
+    
+        if field.fieldType == .password ||
+            field.fieldType == .passwordConfirm {
+            return true
+        } else {
+            return false
+        }
+    }
+    
 }

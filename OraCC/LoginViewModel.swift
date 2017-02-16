@@ -5,7 +5,7 @@ import NSObject_Rx
 
 struct Message {
     let title: String
-    let body: String
+    let body: String?
 }
 
 class LoginViewModel: NSObject {

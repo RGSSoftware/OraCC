@@ -30,6 +30,13 @@ class RegisterViewModel: NSObject {
             if let field = formViewModel.form.firstInvalidField() {
                 showMessage.onNext(Message(title: field.label, body: field.validator.errorMessage))
             }
+        } else {
+            let password = formViewModel.form.field(.password)!.value!
+            let passwordConfirm = formViewModel.form.field(.passwordConfirm)!.value!
+            
+            if password != passwordConfirm {
+                return showMessage.onNext(Message(title: "Password Mismatch", body: nil))
+            }
         }
     }
     

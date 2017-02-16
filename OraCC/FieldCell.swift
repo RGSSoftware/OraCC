@@ -60,5 +60,6 @@ class FieldCell: UITableViewCell {
         
         label.text = viewModel.label
         textField.placeholder = viewModel.placeholder
+        textField.isSecureTextEntry = viewModel.isSecure
     }
 }
