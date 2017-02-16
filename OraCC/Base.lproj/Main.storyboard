@@ -35,7 +35,7 @@
                     </view>
                     <connections>
                         <segue destination="bCC-U6-q5z" kind="show" identifier="from_Splash_to_Login" id="8OA-ru-nEI"/>
-                        <segue destination="adE-fO-qFL" kind="show" identifier="from_Splash_to_Chats" id="bGP-sR-bHY"/>
+                        <segue destination="adE-fO-qFL" kind="show" identifier="from_Splash_to_Main" id="bGP-sR-bHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Eb-vI-fAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
