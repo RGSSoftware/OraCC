@@ -3,6 +3,8 @@ import Foundation
 enum FieldType {
     case email
     case password
+    case text
+    case passwordConfirm
 }
 
 struct LoginForm {
