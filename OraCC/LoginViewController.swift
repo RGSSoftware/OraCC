@@ -28,18 +28,11 @@ class LoginViewController: UITableViewController {
             let rVC = segue.destination as! RegisterViewController
             
             rVC.provider = provider
-            
-            
         }
     }
     
     @IBAction func login(_ sender: Any) {
-        
-        let paths = tableView.indexPathsForVisibleRows
-        paths?.forEach{ [weak self] index in
-            let cell = self?.tableView.cellForRow(at: index) as! FieldCell
-            cell.textField.resignFirstResponder()
-        }
+        tableView.resignFirstResponderVisibleRows()
         
         viewModel.login()
     }
