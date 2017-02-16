@@ -48,14 +48,28 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `Splash`.
     static let splash = Rswift.ImageResource(bundle: R.hostingBundle, name: "Splash")
+    /// Image `account`.
+    static let account = Rswift.ImageResource(bundle: R.hostingBundle, name: "account")
+    /// Image `list`.
+    static let list = Rswift.ImageResource(bundle: R.hostingBundle, name: "list")
     
     /// `UIImage(named: "Splash", bundle: ..., traitCollection: ...)`
     static func splash(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.splash, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "account", bundle: ..., traitCollection: ...)`
+    static func account(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.account, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "list", bundle: ..., traitCollection: ...)`
+    static func list(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.list, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -94,14 +108,14 @@ struct R: Rswift.Validatable {
     /// This struct is generated for `SplashViewController`, and contains static references to 2 segues.
     struct splashViewController {
       /// Segue identifier `from_Splash_to_Chats`.
-      static let from_Splash_to_Chats: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Splash_to_Chats")
+      static let from_Splash_to_Chats: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UITabBarController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Splash_to_Chats")
       /// Segue identifier `from_Splash_to_Login`.
       static let from_Splash_to_Login: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Splash_to_Login")
       
       /// Optionally returns a typed version of segue `from_Splash_to_Chats`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func from_Splash_to_Chats(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UINavigationController>? {
+      static func from_Splash_to_Chats(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UITabBarController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.splashViewController.from_Splash_to_Chats, segue: segue)
       }
       
@@ -201,7 +215,9 @@ struct _R: Rswift.Validatable {
       }
       
       static func validate() throws {
+        if UIKit.UIImage(named: "list") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'list' is used in storyboard 'Main', but couldn't be loaded.") }
         if UIKit.UIImage(named: "Splash") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Splash' is used in storyboard 'Main', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "account") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'account' is used in storyboard 'Main', but couldn't be loaded.") }
         if _R.storyboard.main().registerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'registerViewController' could not be loaded from storyboard 'Main' as 'RegisterViewController'.") }
         if _R.storyboard.main().loginViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginViewController' could not be loaded from storyboard 'Main' as 'LoginViewController'.") }
       }
