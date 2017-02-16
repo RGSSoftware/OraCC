@@ -19,6 +19,8 @@
 		225C11671E55592800062B2A /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11661E55592800062B2A /* RegisterViewModel.swift */; };
 		225C11691E555C0B00062B2A /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11681E555C0B00062B2A /* FormViewModel.swift */; };
 		225C116B1E555C2C00062B2A /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C116A1E555C2C00062B2A /* FieldViewModel.swift */; };
+		225C116D1E555E8F00062B2A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C116C1E555E8F00062B2A /* RegisterViewController.swift */; };
+		225C116F1E55630200062B2A /* UITableView+Exten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C116E1E55630200062B2A /* UITableView+Exten.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -68,6 +70,8 @@
 		225C11661E55592800062B2A /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		225C11681E555C0B00062B2A /* FormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		225C116A1E555C2C00062B2A /* FieldViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
+		225C116C1E555E8F00062B2A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		225C116E1E55630200062B2A /* UITableView+Exten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Exten.swift"; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			children = (
 				225C11551E54FECE00062B2A /* Sequence+Exten.swift */,
 				225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */,
+				225C116E1E55630200062B2A /* UITableView+Exten.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				225C115E1E554BF700062B2A /* RegisterForm.swift */,
 				2260A8B11E54C4070083D59E /* Field.swift */,
 				2260A8AF1E54C31D0083D59E /* FieldCell.swift */,
+				225C116C1E555E8F00062B2A /* RegisterViewController.swift */,
 				2260A8AB1E54C30F0083D59E /* LoginViewController.swift */,
 				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
 				22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */,
@@ -467,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2260A8A81E54BA750083D59E /* PasswordValidator.swift in Sources */,
+				225C116D1E555E8F00062B2A /* RegisterViewController.swift in Sources */,
 				2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */,
 				2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */,
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
@@ -484,6 +491,7 @@
 				2260A8B01E54C31D0083D59E /* FieldCell.swift in Sources */,
 				2260A8AE1E54C30F0083D59E /* LoginViewModel.swift in Sources */,
 				225C11651E55549300062B2A /* FormRepresentable.swift in Sources */,
+				225C116F1E55630200062B2A /* UITableView+Exten.swift in Sources */,
 				225C11561E54FECE00062B2A /* Sequence+Exten.swift in Sources */,
 				225C11611E554CBD00062B2A /* TextValidator.swift in Sources */,
 				2260A8B21E54C4070083D59E /* Field.swift in Sources */,

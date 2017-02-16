@@ -1,11 +1,10 @@
 import UIKit
 import Moya
 
-class LoginViewController: UITableViewController {
-    
+class RegisterViewController: UITableViewController {
     var provider: RxMoyaProvider<OraAPI>!
-    lazy var viewModel: LoginViewModel = {
-        return LoginViewModel(provider: self.provider)
+    lazy var viewModel: RegisterViewModel = {
+        return RegisterViewModel(provider: self.provider)
     }()
     
     override func viewDidLoad() {
@@ -19,29 +18,20 @@ class LoginViewController: UITableViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
             
             self?.present(alert, animated: true){}
-        
+            
         }).addDisposableTo(rx_disposeBag)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is RegisterViewController{
-            let rVC = segue.destination as! RegisterViewController
-            
-            rVC.provider = provider
-            
-            
-        }
-    }
-    
     @IBAction func login(_ sender: Any) {
         
-        let paths = tableView.indexPathsForVisibleRows
-        paths?.forEach{ [weak self] index in
-            let cell = self?.tableView.cellForRow(at: index) as! FieldCell
-            cell.textField.resignFirstResponder()
-        }
+        tableView.resignFirstResponderVisibleRows()
         
-        viewModel.login()
+        _ = navigationController?.popViewController(animated: true)
+    }
+    @IBAction func register(_ sender: Any) {
+        
+        tableView.resignFirstResponderVisibleRows()
+        
+        viewModel.register()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,4 +53,5 @@ class LoginViewController: UITableViewController {
         cell.textField.becomeFirstResponder()
         
     }
+    
 }

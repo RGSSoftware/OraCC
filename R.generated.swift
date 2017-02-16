@@ -74,8 +74,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
+    /// This struct is generated for `LoginViewController`, and contains static references to 1 segues.
+    struct loginViewController {
+      /// Segue identifier `from_Login_to_Register`.
+      static let from_Login_to_Register: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, LoginViewController, RegisterViewController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Login_to_Register")
+      
+      /// Optionally returns a typed version of segue `from_Login_to_Register`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func from_Login_to_Register(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, LoginViewController, RegisterViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.loginViewController.from_Login_to_Register, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This struct is generated for `SplashViewController`, and contains static references to 2 segues.
     struct splashViewController {
       /// Segue identifier `from_Splash_to_Chats`.
@@ -175,13 +190,19 @@ struct _R: Rswift.Validatable {
       let bundle = R.hostingBundle
       let loginViewController = StoryboardViewControllerResource<LoginViewController>(identifier: "LoginViewController")
       let name = "Main"
+      let registerViewController = StoryboardViewControllerResource<RegisterViewController>(identifier: "RegisterViewController")
       
       func loginViewController(_: Void = ()) -> LoginViewController? {
         return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: loginViewController)
       }
       
+      func registerViewController(_: Void = ()) -> RegisterViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: registerViewController)
+      }
+      
       static func validate() throws {
         if UIKit.UIImage(named: "Splash") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Splash' is used in storyboard 'Main', but couldn't be loaded.") }
+        if _R.storyboard.main().registerViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'registerViewController' could not be loaded from storyboard 'Main' as 'RegisterViewController'.") }
         if _R.storyboard.main().loginViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'loginViewController' could not be loaded from storyboard 'Main' as 'LoginViewController'.") }
       }
       
