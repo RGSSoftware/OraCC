@@ -27,7 +27,6 @@ class FieldViewModel: NSObject {
     }
     
     var isSecure: Bool{
-    
         if field.fieldType == .password ||
             field.fieldType == .passwordConfirm {
             return true
@@ -35,5 +34,4 @@ class FieldViewModel: NSObject {
             return false
         }
     }
-    
 }
