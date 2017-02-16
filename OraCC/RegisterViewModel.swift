@@ -16,6 +16,8 @@ class RegisterViewModel: NSObject {
     
     var showSpinner = PublishSubject<Bool>()
     
+    var didRegisterSuccessful = PublishSubject<Void>()
+    
     init(provider: RxMoyaProvider<OraAPI>){
         self.provider = provider
         self.formViewModel = FormViewModel(form: RegisterForm())
@@ -51,22 +53,26 @@ class RegisterViewModel: NSObject {
                 
                 switch response.responseStatusCode{
                 case .success:
-                    print(200)
-                    print(response.statusCode)
+                    
+                    if let urlResponse = response.response as? HTTPURLResponse {
+                        
+                        if let authorization = urlResponse.allHeaderFields["Authorization"] as? String{
+                            AuthenticationToken.token = authorization
+                        }
+                    }
+                    
+                    self?.didRegisterSuccessful.onNext()
+                    
                 case .clientError:
-                    print(400)
-                    print(response.statusCode)
+                    self?.showMessage.onNext(Message(title: "Register Error", body: "Please check your submitted info and try again."))
                 case .serverError,
+                     .informational,
                      .undefined:
-                    print(500)
-                    print(response.statusCode)
+                    self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
                 default:()
-                print(response.statusCode)
                 }
 
             }).addDisposableTo(rx_disposeBag)
-            
         }
     }
-    
 }

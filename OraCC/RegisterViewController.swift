@@ -30,6 +30,10 @@ class RegisterViewController: UITableViewController {
             }
             
         }).addDisposableTo(rx_disposeBag)
+        
+        viewModel.didRegisterSuccessful.subscribe(onNext:{ [weak self] in
+            self?.dismiss(animated: true){}
+        }).addDisposableTo(rx_disposeBag)
     }
     @IBAction func login(_ sender: Any) {
         
