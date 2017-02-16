@@ -22,6 +22,7 @@
 		225C116D1E555E8F00062B2A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C116C1E555E8F00062B2A /* RegisterViewController.swift */; };
 		225C116F1E55630200062B2A /* UITableView+Exten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C116E1E55630200062B2A /* UITableView+Exten.swift */; };
 		225C11711E556A9400062B2A /* ResponseStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11701E556A9400062B2A /* ResponseStatusCode.swift */; };
+		225C11731E56163500062B2A /* OraBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11721E56163500062B2A /* OraBrand.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -74,6 +75,7 @@
 		225C116C1E555E8F00062B2A /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		225C116E1E55630200062B2A /* UITableView+Exten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Exten.swift"; sourceTree = "<group>"; };
 		225C11701E556A9400062B2A /* ResponseStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseStatusCode.swift; sourceTree = "<group>"; };
+		225C11721E56163500062B2A /* OraBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OraBrand.swift; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		22CA52151E52A0BF00038A12 /* OraCC */ = {
 			isa = PBXGroup;
 			children = (
+				225C11721E56163500062B2A /* OraBrand.swift */,
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
 				225C115A1E554AB500062B2A /* Extensions */,
 				225C11591E554A9700062B2A /* Validators */,
@@ -483,6 +486,7 @@
 				2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */,
 				22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */,
 				225C115F1E554BF700062B2A /* RegisterForm.swift in Sources */,
+				225C11731E56163500062B2A /* OraBrand.swift in Sources */,
 				225C11521E54F03900062B2A /* UIViewControllerExtensions.swift in Sources */,
 				225C11711E556A9400062B2A /* ResponseStatusCode.swift in Sources */,
 				225C11671E55592800062B2A /* RegisterViewModel.swift in Sources */,

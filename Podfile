@@ -10,6 +10,7 @@ target 'OraCC' do
   pod 'R.swift', '3.2.0'
   pod 'SnapKit', '3.1.2'
   pod 'SVProgressHUD', '2.1'
+  pod 'UIColor_Hex_Swift', '3.0.2'
 
   target 'OraCCTests' do
     inherit! :search_paths

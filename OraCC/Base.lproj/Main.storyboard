@@ -68,13 +68,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="OraChat" id="fHt-x3-OhW">
                         <barButtonItem key="leftBarButtonItem" title="Register" id="qfx-aS-BR4">
-                            <color key="tintColor" red="0.96470588239999999" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="kR4-A5-ccN" kind="show" identifier="from_Login_to_Register" id="vfg-gg-ycG"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Login" id="EYk-pF-c41">
-                            <color key="tintColor" red="0.96470588235294119" green="0.68627450980392157" blue="0.24705882352941178" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="login:" destination="Sw2-HH-2Cg" id="uTs-Kr-sb3"/>
                             </connections>
@@ -139,9 +137,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Account" id="RyX-pz-GEq">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="YFR-Xy-7Ci">
-                            <color key="tintColor" red="0.96470588239999999" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="YFR-Xy-7Ci"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -243,13 +239,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="OraChat" id="BUB-L7-65N">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="2GK-Lh-7M2">
-                            <color key="tintColor" red="0.96470588239999999" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="login:" destination="kR4-A5-ccN" id="n9V-Tk-d5F"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Register" id="O9i-O1-FOa">
-                            <color key="tintColor" red="0.96470588239999999" green="0.68627450980000004" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="register:" destination="kR4-A5-ccN" id="9x0-OW-2Ta"/>
                             </connections>
