@@ -115,6 +115,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		225C11591E554A9700062B2A /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				2260A8A31E54B78E0083D59E /* Validator.swift */,
+				2260A8A51E54B7D00083D59E /* EmailValidator.swift */,
+				2260A8A71E54BA750083D59E /* PasswordValidator.swift */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		225C115A1E554AB500062B2A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				225C11551E54FECE00062B2A /* Sequence+Exten.swift */,
+				225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		225C115B1E554ACE00062B2A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2260A8AC1E54C30F0083D59E /* LoginViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		225C115C1E554B0F00062B2A /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				2260A8B71E54C7060083D59E /* Login_Sample_Data.json */,
+				225C11571E5548CC00062B2A /* Register_Sample_Data.json */,
+			);
+			name = "Sample Data";
+			sourceTree = "<group>";
+		};
+		225C115D1E554B2800062B2A /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				22CA521A1E52A0BF00038A12 /* Main.storyboard */,
+				22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
 		22CA520A1E52A0BF00038A12 = {
 			isa = PBXGroup;
 			children = (
@@ -138,26 +183,21 @@
 		22CA52151E52A0BF00038A12 /* OraCC */ = {
 			isa = PBXGroup;
 			children = (
-				225C11551E54FECE00062B2A /* Sequence+Exten.swift */,
-				225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */,
-				22CA52641E53B09700038A12 /* R.generated.swift */,
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
-				2260A8A31E54B78E0083D59E /* Validator.swift */,
-				2260A8A51E54B7D00083D59E /* EmailValidator.swift */,
-				2260A8AB1E54C30F0083D59E /* LoginViewController.swift */,
-				2260A8AC1E54C30F0083D59E /* LoginViewModel.swift */,
+				225C115A1E554AB500062B2A /* Extensions */,
+				225C11591E554A9700062B2A /* Validators */,
+				225C115B1E554ACE00062B2A /* ViewModels */,
+				225C115D1E554B2800062B2A /* Storyboard */,
+				225C115C1E554B0F00062B2A /* Sample Data */,
+				22CA52641E53B09700038A12 /* R.generated.swift */,
 				2260A8B51E54C4E70083D59E /* OraAPI.swift */,
 				2260A8B31E54C4280083D59E /* LoginForm.swift */,
 				2260A8B11E54C4070083D59E /* Field.swift */,
-				22CA521A1E52A0BF00038A12 /* Main.storyboard */,
 				2260A8AF1E54C31D0083D59E /* FieldCell.swift */,
-				2260A8A71E54BA750083D59E /* PasswordValidator.swift */,
+				2260A8AB1E54C30F0083D59E /* LoginViewController.swift */,
 				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
 				22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */,
-				2260A8B71E54C7060083D59E /* Login_Sample_Data.json */,
-				225C11571E5548CC00062B2A /* Register_Sample_Data.json */,
 				22CA521D1E52A0BF00038A12 /* Assets.xcassets */,
-				22CA521F1E52A0BF00038A12 /* LaunchScreen.storyboard */,
 				22CA52221E52A0BF00038A12 /* Info.plist */,
 			);
 			path = OraCC;
