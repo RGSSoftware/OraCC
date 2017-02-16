@@ -3,12 +3,7 @@ import Moya
 import RxSwift
 import NSObject_Rx
 
-struct Message {
-    let title: String
-    let body: String
-}
-
-class LoginViewModel: NSObject {
+class RegisterViewModel: NSObject {
     internal let provider: RxMoyaProvider<OraAPI>
     
     internal let formViewModel: FormViewModel
@@ -21,9 +16,7 @@ class LoginViewModel: NSObject {
     
     init(provider: RxMoyaProvider<OraAPI>){
         self.provider = provider
-        
-        self.formViewModel = FormViewModel(form: LoginForm())
-
+        self.formViewModel = FormViewModel(form: RegisterForm())
         
         super.init()
     }
@@ -32,12 +25,12 @@ class LoginViewModel: NSObject {
         return formViewModel.fieldViewModelForIndexPath(indexPath)
     }
     
-    func login() {
+    func register() {
         if !formViewModel.form.isValid{
             if let field = formViewModel.form.firstInvalidField() {
                 showMessage.onNext(Message(title: field.label, body: field.validator.errorMessage))
             }
         }
     }
-
+    
 }
