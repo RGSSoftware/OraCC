@@ -17,7 +17,7 @@
 		225C11631E554D6400062B2A /* TextValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11621E554D6400062B2A /* TextValidatorSpec.swift */; };
 		225C11651E55549300062B2A /* FormRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11641E55549300062B2A /* FormRepresentable.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
-		2260A8A41E54B78E0083D59E /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* Validator.swift */; };
+		2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
 		2260A8A81E54BA750083D59E /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A71E54BA750083D59E /* PasswordValidator.swift */; };
 		2260A8AA1E54BA980083D59E /* PasswordValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A91E54BA980083D59E /* PasswordValidatorSpec.swift */; };
@@ -63,7 +63,7 @@
 		225C11621E554D6400062B2A /* TextValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextValidatorSpec.swift; sourceTree = "<group>"; };
 		225C11641E55549300062B2A /* FormRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
-		2260A8A31E54B78E0083D59E /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		2260A8A71E54BA750083D59E /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		2260A8A91E54BA980083D59E /* PasswordValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidatorSpec.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		225C11591E554A9700062B2A /* Validators */ = {
 			isa = PBXGroup;
 			children = (
-				2260A8A31E54B78E0083D59E /* Validator.swift */,
+				2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */,
 				2260A8A51E54B7D00083D59E /* EmailValidator.swift */,
 				2260A8A71E54BA750083D59E /* PasswordValidator.swift */,
 				225C11601E554CBD00062B2A /* TextValidator.swift */,
@@ -458,7 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2260A8A81E54BA750083D59E /* PasswordValidator.swift in Sources */,
-				2260A8A41E54B78E0083D59E /* Validator.swift in Sources */,
+				2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */,
 				2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */,
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
 				2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */,
