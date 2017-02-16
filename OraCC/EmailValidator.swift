@@ -1,6 +1,6 @@
 import Foundation
 
-class EmailValidator: Validator {
+class EmailValidator: ValidatorRepresentable {
     
     var isValid: Bool = false
     internal var validator: (String?) -> (Bool) = {

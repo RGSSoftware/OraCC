@@ -1,6 +1,6 @@
 import Foundation
 
-struct TextValidator: Validator {
+struct TextValidator: ValidatorRepresentable {
     
     var isValid: Bool = false
     internal var validator: (String?) -> (Bool) = {

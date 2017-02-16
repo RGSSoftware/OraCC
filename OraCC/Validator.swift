@@ -1,6 +1,6 @@
  import Foundation
  
- protocol Validator {
+ protocol ValidatorRepresentable {
     var isValid: Bool { get }
     var validator: (_ value: String?) -> (Bool) { get set }
     
