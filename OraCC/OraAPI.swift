@@ -19,7 +19,7 @@ extension OraAPI : TargetType {
         case .login:
             return "/auth/login"
         case .register:
-            return "/users/create"
+            return "/users"
         }
     }
     
