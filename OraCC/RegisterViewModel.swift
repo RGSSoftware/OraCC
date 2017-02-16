@@ -14,6 +14,8 @@ class RegisterViewModel: NSObject {
     
     var showMessage = PublishSubject<Message>()
     
+    var showSpinner = PublishSubject<Bool>()
+    
     init(provider: RxMoyaProvider<OraAPI>){
         self.provider = provider
         self.formViewModel = FormViewModel(form: RegisterForm())
@@ -37,6 +39,33 @@ class RegisterViewModel: NSObject {
             if password != passwordConfirm {
                 return showMessage.onNext(Message(title: "Password Mismatch", body: nil))
             }
+            
+            showSpinner.onNext(true)
+            
+            let name = formViewModel.form.field(.name)!.value!
+            let email = formViewModel.form.field(.email)!.value!
+            
+            provider.request(.register(name: name, email: email, password: password, passwordConfirmation: passwordConfirm)).subscribe(onNext:{ [weak self] response in
+                
+                self?.showSpinner.onNext(false)
+                
+                switch response.responseStatusCode{
+                case .success:
+                    print(200)
+                    print(response.statusCode)
+                case .clientError:
+                    print(400)
+                    print(response.statusCode)
+                case .serverError,
+                     .undefined:
+                    print(500)
+                    print(response.statusCode)
+                default:()
+                print(response.statusCode)
+                }
+
+            }).addDisposableTo(rx_disposeBag)
+            
         }
     }
     

@@ -1,5 +1,6 @@
 import UIKit
 import Moya
+import SVProgressHUD
 
 class RegisterViewController: UITableViewController {
     var provider: RxMoyaProvider<OraAPI>!
@@ -18,6 +19,15 @@ class RegisterViewController: UITableViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
             
             self?.present(alert, animated: true){}
+            
+        }).addDisposableTo(rx_disposeBag)
+        
+        viewModel.showSpinner.subscribe(onNext:{
+            if $0 {
+                SVProgressHUD.show()
+            } else {
+                SVProgressHUD.dismiss()
+            }
             
         }).addDisposableTo(rx_disposeBag)
     }

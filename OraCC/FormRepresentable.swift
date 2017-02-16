@@ -3,7 +3,7 @@ import Foundation
 enum FieldType {
     case email
     case password
-    case text
+    case name
     case passwordConfirm
 }
 
