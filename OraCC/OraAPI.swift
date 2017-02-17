@@ -1,14 +1,26 @@
 import Foundation
 import Moya
 
-let OraProvider = RxMoyaProvider<OraAPI>()
-let StubOraProvider = RxMoyaProvider<OraAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let endpointClosure = { (target: OraAPI) -> Endpoint<OraAPI> in
+    let defaultEndpoint = RxMoyaProvider.defaultEndpointMapping(for: target)
+    
+    if let token = AuthenticationToken.token {
+        return defaultEndpoint.adding(newHTTPHeaderFields:["Authorization": token])
+    } else {
+        return defaultEndpoint
+    }
+    
+}
+
+let OraProvider = RxMoyaProvider<OraAPI>(endpointClosure:endpointClosure)
+let StubOraProvider = RxMoyaProvider<OraAPI>(endpointClosure:endpointClosure, stubClosure: MoyaProvider.immediatelyStub, plugins: [NetworkLoggerPlugin(verbose: true)])
 
 enum OraAPI {
     case login(email: String, password: String)
     case register(name: String, email: String, password: String, passwordConfirmation: String)
     
     case chats(page: Int, pageSize: Int)
+    case chatMessages(id: Int, page: Int, pageSize: Int)
 }
 
 extension OraAPI : TargetType {
@@ -24,6 +36,9 @@ extension OraAPI : TargetType {
             return "/users"
         case .chats:
             return "/chats"
+        case .chatMessages(let id, _, _):
+            return "/chats/\(id)/chat_messages"
+            
         }
     }
     
@@ -35,6 +50,9 @@ extension OraAPI : TargetType {
             return ["name": name, "email": email, "password": password, "password_confirmation": passwordConfirmation]
         case .chats(let page, let pageSize):
             return ["page": page, "limit": pageSize]
+        case .chatMessages(_, let page, let pageSize):
+            return ["page": page, "limit": pageSize]
+        
         }
     }
     
@@ -47,7 +65,8 @@ extension OraAPI : TargetType {
         case .login,
              .register:
             return .post
-        case .chats:
+        case .chats,
+             .chatMessages:
             return .get
         }
     }
@@ -60,6 +79,8 @@ extension OraAPI : TargetType {
             return stubbedResponse("Register_Sample_Data")
         case .chats:
             return stubbedResponse("Chats_Sample_Data")
+        case .chatMessages:
+            return stubbedResponse("ChatMessaes_Sample_Data")
         }
     }
     

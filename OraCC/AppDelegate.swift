@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         OraBrand.mainColor = UIColor("#F6AF3F")
         
+        let user = User(id: 1, name: "dd", email: "fake@gmail.com")
+        User.setCurrentUser(user)
+        
         UITabBar.appearance().tintColor = OraBrand.mainColor
         UINavigationBar.appearance().tintColor = OraBrand.mainColor
         

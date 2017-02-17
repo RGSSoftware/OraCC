@@ -14,6 +14,18 @@ struct User {
     let id: Int
     let name: String
     let email: String
+    
+    static func setCurrentUser(_ user: User){
+        let dic = ["id": user.id,
+                   "name": user.name,
+                   "email": user.email] as [String : Any]
+        UserDefaults.standard.set(dic, forKey: "currentUser")
+    }
+    
+    static func currentUser() -> User? {
+        let dic = UserDefaults.standard.object(forKey: "currentUser") as! [String: Any]
+        return User.fromJSON(dic)
+    }
 }
 
 struct Chat {

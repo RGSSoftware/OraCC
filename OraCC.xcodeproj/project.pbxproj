@@ -31,6 +31,13 @@
 		225C117F1E56485100062B2A /* Chats_Sample_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 225C117E1E56485100062B2A /* Chats_Sample_Data.json */; };
 		225C11811E56788C00062B2A /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11801E56788C00062B2A /* ChatViewModel.swift */; };
 		225C11831E567BE500062B2A /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11821E567BE500062B2A /* ChatCell.swift */; };
+		225C11871E56BD2200062B2A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11861E56BD2200062B2A /* ChatViewController.swift */; };
+		225C11891E56BDC700062B2A /* ChatMessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11881E56BDC700062B2A /* ChatMessagesViewModel.swift */; };
+		225C118B1E56C07300062B2A /* ChatMessaes_Sample_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 225C118A1E56C07300062B2A /* ChatMessaes_Sample_Data.json */; };
+		225C119A1E56E22000062B2A /* MessageCellOutgoing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225C11981E56E22000062B2A /* MessageCellOutgoing.xib */; };
+		225C119B1E56E22000062B2A /* MessgeCellIncoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225C11991E56E22000062B2A /* MessgeCellIncoming.xib */; };
+		225C119F1E56E2F300062B2A /* MessageCellOutgoing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C119E1E56E2F300062B2A /* MessageCellOutgoing.swift */; };
+		225C11A11E56E39800062B2A /* MessageCellIngoing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11A01E56E39800062B2A /* MessageCellIngoing.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -92,6 +99,13 @@
 		225C117E1E56485100062B2A /* Chats_Sample_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Chats_Sample_Data.json; sourceTree = "<group>"; };
 		225C11801E56788C00062B2A /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		225C11821E567BE500062B2A /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		225C11861E56BD2200062B2A /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		225C11881E56BDC700062B2A /* ChatMessagesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessagesViewModel.swift; sourceTree = "<group>"; };
+		225C118A1E56C07300062B2A /* ChatMessaes_Sample_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ChatMessaes_Sample_Data.json; sourceTree = "<group>"; };
+		225C11981E56E22000062B2A /* MessageCellOutgoing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCellOutgoing.xib; sourceTree = "<group>"; };
+		225C11991E56E22000062B2A /* MessgeCellIncoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessgeCellIncoming.xib; sourceTree = "<group>"; };
+		225C119E1E56E2F300062B2A /* MessageCellOutgoing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellOutgoing.swift; sourceTree = "<group>"; };
+		225C11A01E56E39800062B2A /* MessageCellIngoing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellIngoing.swift; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -178,6 +192,7 @@
 		225C115B1E554ACE00062B2A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				225C11881E56BDC700062B2A /* ChatMessagesViewModel.swift */,
 				225C11801E56788C00062B2A /* ChatViewModel.swift */,
 				225C11761E56351800062B2A /* ChatsViewModel.swift */,
 				225C11681E555C0B00062B2A /* FormViewModel.swift */,
@@ -194,6 +209,7 @@
 				225C117E1E56485100062B2A /* Chats_Sample_Data.json */,
 				2260A8B71E54C7060083D59E /* Login_Sample_Data.json */,
 				225C11571E5548CC00062B2A /* Register_Sample_Data.json */,
+				225C118A1E56C07300062B2A /* ChatMessaes_Sample_Data.json */,
 			);
 			name = "Sample Data";
 			sourceTree = "<group>";
@@ -230,6 +246,9 @@
 		22CA52151E52A0BF00038A12 /* OraCC */ = {
 			isa = PBXGroup;
 			children = (
+				225C119E1E56E2F300062B2A /* MessageCellOutgoing.swift */,
+				225C11A01E56E39800062B2A /* MessageCellIngoing.swift */,
+				225C11861E56BD2200062B2A /* ChatViewController.swift */,
 				225C11821E567BE500062B2A /* ChatCell.swift */,
 				225C11781E56364300062B2A /* Chat.swift */,
 				225C11721E56163500062B2A /* OraBrand.swift */,
@@ -240,6 +259,8 @@
 				225C115D1E554B2800062B2A /* Storyboard */,
 				225C115C1E554B0F00062B2A /* Sample Data */,
 				225C11701E556A9400062B2A /* ResponseStatusCode.swift */,
+				225C11981E56E22000062B2A /* MessageCellOutgoing.xib */,
+				225C11991E56E22000062B2A /* MessgeCellIncoming.xib */,
 				22CA52641E53B09700038A12 /* R.generated.swift */,
 				2260A8B51E54C4E70083D59E /* OraAPI.swift */,
 				225C11641E55549300062B2A /* FormRepresentable.swift */,
@@ -373,8 +394,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225C118B1E56C07300062B2A /* ChatMessaes_Sample_Data.json in Resources */,
+				225C119A1E56E22000062B2A /* MessageCellOutgoing.xib in Resources */,
 				22CA52211E52A0BF00038A12 /* LaunchScreen.storyboard in Resources */,
 				2260A8B81E54C7060083D59E /* Login_Sample_Data.json in Resources */,
+				225C119B1E56E22000062B2A /* MessgeCellIncoming.xib in Resources */,
 				22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */,
 				22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */,
 				225C11581E5548CC00062B2A /* Register_Sample_Data.json in Resources */,
@@ -516,6 +540,7 @@
 				2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */,
 				22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */,
 				225C115F1E554BF700062B2A /* RegisterForm.swift in Sources */,
+				225C11871E56BD2200062B2A /* ChatViewController.swift in Sources */,
 				225C11791E56364300062B2A /* Chat.swift in Sources */,
 				225C11731E56163500062B2A /* OraBrand.swift in Sources */,
 				225C11521E54F03900062B2A /* UIViewControllerExtensions.swift in Sources */,
@@ -525,8 +550,11 @@
 				225C11691E555C0B00062B2A /* FormViewModel.swift in Sources */,
 				225C11771E56351800062B2A /* ChatsViewModel.swift in Sources */,
 				2260A8B41E54C4280083D59E /* LoginForm.swift in Sources */,
+				225C11A11E56E39800062B2A /* MessageCellIngoing.swift in Sources */,
 				2260A8B61E54C4E70083D59E /* OraAPI.swift in Sources */,
+				225C11891E56BDC700062B2A /* ChatMessagesViewModel.swift in Sources */,
 				22CA52651E53B09700038A12 /* R.generated.swift in Sources */,
+				225C119F1E56E2F300062B2A /* MessageCellOutgoing.swift in Sources */,
 				225C116B1E555C2C00062B2A /* FieldViewModel.swift in Sources */,
 				2260A8B01E54C31D0083D59E /* FieldCell.swift in Sources */,
 				2260A8AE1E54C30F0083D59E /* LoginViewModel.swift in Sources */,
@@ -684,6 +712,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Software.OraCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -697,6 +726,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Software.OraCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

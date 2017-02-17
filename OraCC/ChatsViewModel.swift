@@ -33,6 +33,10 @@ class ChatsViewModel: NSObject {
         }
     }
     
+    func chatIdForIndex(_ indexPath: IndexPath) -> Int {
+        return chatForIndex(indexPath).id
+    }
+    
     func chatViewModelForIndex(_ indexPath: IndexPath) -> ChatViewModel {
         return ChatViewModel(chat: chatForIndex(indexPath))
     }
@@ -101,9 +105,9 @@ class ChatsViewModel: NSObject {
                     
 
                     
-                    print(strongSelf.daysDates)
-                    print("////////")
-                    print(strongSelf.chats)
+//                    print(strongSelf.daysDates)
+//                    print("////////")
+//                    print(strongSelf.chats)
                     
 //                    print( chats )
                 } catch {

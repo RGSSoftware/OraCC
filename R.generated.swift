@@ -21,14 +21,22 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 3 files.
+  /// This `R.file` struct is generated, and contains static references to 4 files.
   struct file {
+    /// Resource file `ChatMessaes_Sample_Data.json`.
+    static let chatMessaes_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "ChatMessaes_Sample_Data", pathExtension: "json")
     /// Resource file `Chats_Sample_Data.json`.
     static let chats_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Chats_Sample_Data", pathExtension: "json")
     /// Resource file `Login_Sample_Data.json`.
     static let login_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Login_Sample_Data", pathExtension: "json")
     /// Resource file `Register_Sample_Data.json`.
     static let register_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Register_Sample_Data", pathExtension: "json")
+    
+    /// `bundle.url(forResource: "ChatMessaes_Sample_Data", withExtension: "json")`
+    static func chatMessaes_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.chatMessaes_Sample_DataJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "Chats_Sample_Data", withExtension: "json")`
     static func chats_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
@@ -100,8 +108,23 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.segue` struct is generated, and contains static references to 2 view controllers.
+  /// This `R.segue` struct is generated, and contains static references to 3 view controllers.
   struct segue {
+    /// This struct is generated for `ChatsViewController`, and contains static references to 1 segues.
+    struct chatsViewController {
+      /// Segue identifier `from_Chats_to_Chat`.
+      static let from_Chats_to_Chat: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, ChatsViewController, ChatViewController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Chats_to_Chat")
+      
+      /// Optionally returns a typed version of segue `from_Chats_to_Chat`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func from_Chats_to_Chat(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, ChatsViewController, ChatViewController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.chatsViewController.from_Chats_to_Chat, segue: segue)
+      }
+      
+      fileprivate init() {}
+    }
+    
     /// This struct is generated for `LoginViewController`, and contains static references to 1 segues.
     struct loginViewController {
       /// Segue identifier `from_Login_to_Register`.

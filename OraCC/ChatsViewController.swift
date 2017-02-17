@@ -44,4 +44,18 @@ class ChatsViewController: UITableViewController {
         return 100
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        performSegue(withIdentifier: R.segue.chatsViewController.from_Chats_to_Chat, sender: viewModel.chatIdForIndex(indexPath))
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == R.segue.chatsViewController.from_Chats_to_Chat.identifier {
+            if let cVC = segue.destination as? ChatViewController {
+                cVC.chatId = sender as? Int
+                cVC.provider = provider
+            }
+        }
+    }
 }

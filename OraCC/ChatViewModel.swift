@@ -13,7 +13,6 @@ class ChatViewModel: NSObject {
         formatter.allowedUnits = [.day, .hour, .minute]
         
         let date = formatter.string(from: lastMessage.createdAt, to: Date())
-        print(lastMessage.user.name)
         return lastMessage.user.name + " - " + date! + " ago"
         
     }
