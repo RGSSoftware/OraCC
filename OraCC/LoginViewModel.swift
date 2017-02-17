@@ -21,6 +21,8 @@ class LoginViewModel: NSObject {
     
     var showSpinner = PublishSubject<Bool>()
     
+    var shouldReload = PublishSubject<Void>()
+    
     var didLoginSuccessful = PublishSubject<Void>()
     
     init(provider: RxMoyaProvider<OraAPI>){
@@ -30,6 +32,11 @@ class LoginViewModel: NSObject {
 
         
         super.init()
+    }
+    
+    func clearForm() {
+        formViewModel.form.fields.forEach{$0.value = nil}
+        shouldReload.onNext()
     }
     
     func fieldViewModelForIndexPath(_ indexPath: IndexPath) -> FieldViewModel?{

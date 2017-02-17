@@ -36,6 +36,13 @@ class LoginViewController: UITableViewController {
         viewModel.didLoginSuccessful.subscribe(onNext:{ [weak self] in
             self?.dismiss(animated: true){}
         }).addDisposableTo(rx_disposeBag)
+        
+        viewModel.shouldReload.asObservable().bindNext{ [weak self] indexes in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.tableView.reloadData()
+            
+        }.addDisposableTo(rx_disposeBag)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,6 +51,12 @@ class LoginViewController: UITableViewController {
             
             rVC.provider = provider
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        viewModel.clearForm()
     }
     
     @IBAction func login(_ sender: Any) {
