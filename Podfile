@@ -12,6 +12,7 @@ target 'OraCC' do
   pod 'SVProgressHUD', '2.1'
   pod 'UIColor_Hex_Swift', '3.0.2'
   pod 'SwiftyJSON', '3.1.3'
+  pod 'JSQMessagesViewController', :git => 'https://github.com/jessesquires/JSQMessagesViewController.git', :branch => 'develop'
 
   target 'OraCCTests' do
     inherit! :search_paths
