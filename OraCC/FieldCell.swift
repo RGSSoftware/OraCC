@@ -33,6 +33,9 @@ class FieldCell: UITableViewCell {
         
         textField = UITextField()
         textField.borderStyle = .none
+        textField.spellCheckingType = .no
+        textField.autocorrectionType = .no
+        textField.delegate = self
         textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         contentView.addSubview(label)
@@ -66,5 +69,12 @@ class FieldCell: UITableViewCell {
     
     func textFieldDidChange(_ textField: UITextField) {
         viewModel.value.value = textField.text
+    }
+}
+
+extension FieldCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return false
     }
 }
