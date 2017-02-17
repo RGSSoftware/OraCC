@@ -21,7 +21,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 4 files.
+  /// This `R.file` struct is generated, and contains static references to 5 files.
   struct file {
     /// Resource file `ChatMessaes_Sample_Data.json`.
     static let chatMessaes_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "ChatMessaes_Sample_Data", pathExtension: "json")
@@ -31,6 +31,8 @@ struct R: Rswift.Validatable {
     static let login_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Login_Sample_Data", pathExtension: "json")
     /// Resource file `Register_Sample_Data.json`.
     static let register_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Register_Sample_Data", pathExtension: "json")
+    /// Resource file `UpdateMe_Sample_Data.json`.
+    static let updateMe_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "UpdateMe_Sample_Data", pathExtension: "json")
     
     /// `bundle.url(forResource: "ChatMessaes_Sample_Data", withExtension: "json")`
     static func chatMessaes_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
@@ -53,6 +55,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "Register_Sample_Data", withExtension: "json")`
     static func register_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.register_Sample_DataJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "UpdateMe_Sample_Data", withExtension: "json")`
+    static func updateMe_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.updateMe_Sample_DataJson
       return fileResource.bundle.url(forResource: fileResource)
     }
     

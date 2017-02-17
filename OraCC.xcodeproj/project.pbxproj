@@ -41,6 +41,7 @@
 		225C11BB1E5788DD00062B2A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11BA1E5788DD00062B2A /* AccountViewController.swift */; };
 		225C11BD1E57891F00062B2A /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11BC1E57891F00062B2A /* AccountViewModel.swift */; };
 		225C11BF1E578AB600062B2A /* AccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11BE1E578AB600062B2A /* AccountForm.swift */; };
+		225C11C11E579C6E00062B2A /* UpdateMe_Sample_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 225C11C01E579C6E00062B2A /* UpdateMe_Sample_Data.json */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -113,6 +114,7 @@
 		225C11BA1E5788DD00062B2A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		225C11BC1E57891F00062B2A /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		225C11BE1E578AB600062B2A /* AccountForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountForm.swift; sourceTree = "<group>"; };
+		225C11C01E579C6E00062B2A /* UpdateMe_Sample_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UpdateMe_Sample_Data.json; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				2260A8B71E54C7060083D59E /* Login_Sample_Data.json */,
 				225C11571E5548CC00062B2A /* Register_Sample_Data.json */,
 				225C118A1E56C07300062B2A /* ChatMessaes_Sample_Data.json */,
+				225C11C01E579C6E00062B2A /* UpdateMe_Sample_Data.json */,
 			);
 			name = "Sample Data";
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			files = (
 				225C118B1E56C07300062B2A /* ChatMessaes_Sample_Data.json in Resources */,
 				225C119A1E56E22000062B2A /* MessageCellOutgoing.xib in Resources */,
+				225C11C11E579C6E00062B2A /* UpdateMe_Sample_Data.json in Resources */,
 				22CA52211E52A0BF00038A12 /* LaunchScreen.storyboard in Resources */,
 				2260A8B81E54C7060083D59E /* Login_Sample_Data.json in Resources */,
 				225C119B1E56E22000062B2A /* MessgeCellIncoming.xib in Resources */,

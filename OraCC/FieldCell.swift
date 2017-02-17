@@ -33,6 +33,7 @@ class FieldCell: UITableViewCell {
         
         textField = UITextField()
         textField.borderStyle = .none
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         
         contentView.addSubview(label)
         contentView.addSubview(textField)
@@ -53,14 +54,17 @@ class FieldCell: UITableViewCell {
      func setupSubscriptions() {
         
         reuseBag = DisposeBag()
-        guard let reuseBag = reuseBag else { return }
         guard let viewModel = viewModel else { return }
         
+        textField.text = nil
         textField.text = viewModel.value.value
-        textField.rx.text.bindTo(viewModel.value).addDisposableTo(reuseBag)
         
         label.text = viewModel.label
         textField.placeholder = viewModel.placeholder
         textField.isSecureTextEntry = viewModel.isSecure
+    }
+    
+    func textFieldDidChange(_ textField: UITextField) {
+        viewModel.value.value = textField.text
     }
 }

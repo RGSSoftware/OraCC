@@ -19,6 +19,7 @@ let StubOraProvider = RxMoyaProvider<OraAPI>(endpointClosure:endpointClosure, st
 enum OraAPI {
     case login(email: String, password: String)
     case register(name: String, email: String, password: String, passwordConfirmation: String)
+    case updateMe(name: String, email: String, password: String, passwordConfirmation: String)
     
     case chats(page: Int, pageSize: Int)
     case chatMessages(id: Int, page: Int, pageSize: Int)
@@ -39,7 +40,8 @@ extension OraAPI : TargetType {
             return "/chats"
         case .chatMessages(let id, _, _):
             return "/chats/\(id)/chat_messages"
-            
+        case .updateMe:
+            return "/users/current"
         }
     }
     
@@ -53,7 +55,8 @@ extension OraAPI : TargetType {
             return ["page": page, "limit": pageSize]
         case .chatMessages(_, let page, let pageSize):
             return ["page": page, "limit": pageSize]
-        
+        case .updateMe(let name, let email, let password, let passwordConfirmation):
+            return ["name": name, "email": email, "password": password, "password_confirmation": passwordConfirmation]
         }
     }
     
@@ -69,6 +72,8 @@ extension OraAPI : TargetType {
         case .chats,
              .chatMessages:
             return .get
+        case .updateMe:
+            return .patch
         }
     }
     
@@ -82,13 +87,16 @@ extension OraAPI : TargetType {
             return stubbedResponse("Chats_Sample_Data")
         case .chatMessages:
             return stubbedResponse("ChatMessaes_Sample_Data")
+        case .updateMe:
+            return stubbedResponse("UpdateMe_Sample_Data")
         }
     }
     
     var parameterEncoding: Moya.ParameterEncoding {
         switch self {
         case .login,
-             .register:
+             .register,
+             .updateMe:
             return JSONEncoding.default
         default:
             return URLEncoding.default

@@ -15,11 +15,8 @@ class AccountViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         viewModel.showMessage.subscribe(onNext:{ [weak self] message in
-            let alert = UIAlertController(title: message.title, message: message.body, preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Ok", style: .default))
-            
-            self?.present(alert, animated: true){}
+            self?.showAlertWithTitle(message.title, message: message.body)
             
         }).addDisposableTo(rx_disposeBag)
         
@@ -33,8 +30,17 @@ class AccountViewController: UITableViewController {
         }).addDisposableTo(rx_disposeBag)
         
         viewModel.didSaveSuccessful.subscribe(onNext:{ [weak self] in
-            self?.dismiss(animated: true){}
+            self?.showAlertWithTitle("Save Successful", message: nil)
+            self?.tableView.reloadData()
         }).addDisposableTo(rx_disposeBag)
+    }
+    
+    func showAlertWithTitle(_ title: String?, message: String?) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        
+        present(alert, animated: true){}
     }
     
     @IBAction func save(_ sender: Any) {
