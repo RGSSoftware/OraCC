@@ -13,7 +13,7 @@ class FieldViewModel: NSObject {
         return field.placeholder
     }
     
-    var value = PublishSubject<String?>()
+    var value = Variable<String?>(nil)
     
     init(field: Field) {
         
@@ -21,7 +21,9 @@ class FieldViewModel: NSObject {
         
         super.init()
         
-        self.value.subscribe(onNext:{
+        value.value = field.value
+        
+        self.value.asObservable().subscribe(onNext:{
             self.field.value = $0
         }).addDisposableTo(rx_disposeBag)
     }

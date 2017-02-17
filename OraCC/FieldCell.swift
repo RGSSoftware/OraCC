@@ -56,6 +56,7 @@ class FieldCell: UITableViewCell {
         guard let reuseBag = reuseBag else { return }
         guard let viewModel = viewModel else { return }
         
+        textField.text = viewModel.value.value
         textField.rx.text.bindTo(viewModel.value).addDisposableTo(reuseBag)
         
         label.text = viewModel.label

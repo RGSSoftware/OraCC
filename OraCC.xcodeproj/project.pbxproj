@@ -38,6 +38,9 @@
 		225C119B1E56E22000062B2A /* MessgeCellIncoming.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225C11991E56E22000062B2A /* MessgeCellIncoming.xib */; };
 		225C119F1E56E2F300062B2A /* MessageCellOutgoing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C119E1E56E2F300062B2A /* MessageCellOutgoing.swift */; };
 		225C11A11E56E39800062B2A /* MessageCellIngoing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11A01E56E39800062B2A /* MessageCellIngoing.swift */; };
+		225C11BB1E5788DD00062B2A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11BA1E5788DD00062B2A /* AccountViewController.swift */; };
+		225C11BD1E57891F00062B2A /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11BC1E57891F00062B2A /* AccountViewModel.swift */; };
+		225C11BF1E578AB600062B2A /* AccountForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11BE1E578AB600062B2A /* AccountForm.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -107,6 +110,9 @@
 		225C119E1E56E2F300062B2A /* MessageCellOutgoing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellOutgoing.swift; sourceTree = "<group>"; };
 		225C11A01E56E39800062B2A /* MessageCellIngoing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellIngoing.swift; sourceTree = "<group>"; };
 		225C11B31E575CF300062B2A /* OraCC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OraCC-Bridging-Header.h"; sourceTree = "<group>"; };
+		225C11BA1E5788DD00062B2A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		225C11BC1E57891F00062B2A /* AccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		225C11BE1E578AB600062B2A /* AccountForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountForm.swift; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 		225C115B1E554ACE00062B2A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				225C11BC1E57891F00062B2A /* AccountViewModel.swift */,
 				225C11881E56BDC700062B2A /* ChatMessagesViewModel.swift */,
 				225C11801E56788C00062B2A /* ChatViewModel.swift */,
 				225C11761E56351800062B2A /* ChatsViewModel.swift */,
@@ -247,6 +254,7 @@
 		22CA52151E52A0BF00038A12 /* OraCC */ = {
 			isa = PBXGroup;
 			children = (
+				225C11BA1E5788DD00062B2A /* AccountViewController.swift */,
 				225C119E1E56E2F300062B2A /* MessageCellOutgoing.swift */,
 				225C11A01E56E39800062B2A /* MessageCellIngoing.swift */,
 				225C11861E56BD2200062B2A /* ChatViewController.swift */,
@@ -265,6 +273,7 @@
 				22CA52641E53B09700038A12 /* R.generated.swift */,
 				2260A8B51E54C4E70083D59E /* OraAPI.swift */,
 				225C11641E55549300062B2A /* FormRepresentable.swift */,
+				225C11BE1E578AB600062B2A /* AccountForm.swift */,
 				2260A8B31E54C4280083D59E /* LoginForm.swift */,
 				225C115E1E554BF700062B2A /* RegisterForm.swift */,
 				2260A8B11E54C4070083D59E /* Field.swift */,
@@ -530,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225C11BB1E5788DD00062B2A /* AccountViewController.swift in Sources */,
 				2260A8A81E54BA750083D59E /* PasswordValidator.swift in Sources */,
 				225C117B1E563C3E00062B2A /* Observable+VariablePublish.swift in Sources */,
 				225C116D1E555E8F00062B2A /* RegisterViewController.swift in Sources */,
@@ -539,9 +549,11 @@
 				225C11811E56788C00062B2A /* ChatViewModel.swift in Sources */,
 				225C11751E5634BE00062B2A /* ChatsViewController.swift in Sources */,
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
+				225C11BD1E57891F00062B2A /* AccountViewModel.swift in Sources */,
 				225C11831E567BE500062B2A /* ChatCell.swift in Sources */,
 				2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */,
 				22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */,
+				225C11BF1E578AB600062B2A /* AccountForm.swift in Sources */,
 				225C115F1E554BF700062B2A /* RegisterForm.swift in Sources */,
 				225C11871E56BD2200062B2A /* ChatViewController.swift in Sources */,
 				225C11791E56364300062B2A /* Chat.swift in Sources */,

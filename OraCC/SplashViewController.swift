@@ -34,6 +34,12 @@ class SplashViewController: UIViewController {
                         cVC.provider = provider
                     }
                 }
+                
+                if let nVC = tVC.viewControllers?[1] as? UINavigationController {
+                    if let aVC = nVC.topViewController as? AccountViewController {
+                        aVC.provider = provider
+                    }
+                }
             }
         }
     }
