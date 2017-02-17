@@ -13,6 +13,7 @@ target 'OraCC' do
   pod 'UIColor_Hex_Swift', '3.0.2'
   pod 'SwiftyJSON', '3.1.3'
   pod 'JSQMessagesViewController', :git => 'https://github.com/jessesquires/JSQMessagesViewController.git', :branch => 'develop'
+  pod 'UIScrollView-InfiniteScroll', '1.0.0'
 
   target 'OraCCTests' do
     inherit! :search_paths

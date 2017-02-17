@@ -41,12 +41,15 @@ class ChatsViewModel: NSObject {
         return ChatViewModel(chat: chatForIndex(indexPath))
     }
     
-    var endOfUsers = Variable<Bool>(true)
+    var endOfChats = VariablePublish<Bool>(true)
+    var shouldReload = PublishSubject<Void>()
     
-    internal var insertedElementIndexes = VariablePublish<Array<IndexPath>>([])
+    var showMessage = PublishSubject<Message>()
     
-    internal var pageSize: Int = 1
-    internal var page: Int = 20
+    internal var isReload = false
+    
+    internal var page: Int = 0
+    internal var pageSize: Int = 20
     
     init(provider: RxMoyaProvider<OraAPI>){
     self.provider = provider
@@ -55,15 +58,25 @@ class ChatsViewModel: NSObject {
     super.init()
     }
     
+    func reload() {
+        page = 0
+        isReload = true
+    }
+    
+    func loadNextPage() {
+        page += 1
+        loadCurrentPage()
+    }
+    
     func loadCurrentPage() {
-//        reqestPart().addDisposableTo(rx_disposeBag)
         reqestPart()
     }
     
     func reqestPart() {
+        
         provider.request(.chats(page: page, pageSize: pageSize))
             .subscribe(onNext:{ [weak self] response in
-                
+                                
                 guard let strongSelf = self else { return }
                 
                 do {
@@ -71,6 +84,10 @@ class ChatsViewModel: NSObject {
                     let data = json?["data"] as? [[String: Any]]
                     let chats = data?.map{Chat.fromJSON($0)}
                     
+                    if strongSelf.isReload {
+                        strongSelf.daysDates.removeAll()
+                        strongSelf.endOfChats.value = false
+                    }
                     
                     chats?.forEach{
                         if let message = $0.lastMessage {
@@ -103,18 +120,26 @@ class ChatsViewModel: NSObject {
             
                     })
                     
+                    if (chats?.count)! < strongSelf.pageSize{
+                        strongSelf.endOfChats.value = true
+                    }
 
-                    
-//                    print(strongSelf.daysDates)
-//                    print("////////")
-//                    print(strongSelf.chats)
-                    
-//                    print( chats )
                 } catch {
+                    strongSelf.endOfChats.value = true
                     
                 }
-            
-        }).addDisposableTo(rx_disposeBag)
+                
+                strongSelf.shouldReload.onNext()
+                strongSelf.isReload = false
+                
+                }, onError:{ [weak self] error in
+                    guard let strongSelf = self else { return }
+                    
+                    strongSelf.endOfChats.value = true
+                    strongSelf.shouldReload.onNext()
+                    strongSelf.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                    
+            }).addDisposableTo(rx_disposeBag)
         
     }
 }

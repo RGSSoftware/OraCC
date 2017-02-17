@@ -13,7 +13,7 @@ let endpointClosure = { (target: OraAPI) -> Endpoint<OraAPI> in
 }
 
 let OraProvider = RxMoyaProvider<OraAPI>(endpointClosure:endpointClosure)
-let StubOraProvider = RxMoyaProvider<OraAPI>(endpointClosure:endpointClosure, stubClosure: MoyaProvider.immediatelyStub, plugins: [NetworkLoggerPlugin(verbose: true)])
+let StubOraProvider = RxMoyaProvider<OraAPI>(endpointClosure:endpointClosure, stubClosure: MoyaProvider.delayedStub(2), plugins: [NetworkLoggerPlugin(verbose: true)])
 
 enum OraAPI {
     case login(email: String, password: String)

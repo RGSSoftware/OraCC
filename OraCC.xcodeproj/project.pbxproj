@@ -106,6 +106,7 @@
 		225C11991E56E22000062B2A /* MessgeCellIncoming.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessgeCellIncoming.xib; sourceTree = "<group>"; };
 		225C119E1E56E2F300062B2A /* MessageCellOutgoing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellOutgoing.swift; sourceTree = "<group>"; };
 		225C11A01E56E39800062B2A /* MessageCellIngoing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellIngoing.swift; sourceTree = "<group>"; };
+		225C11B31E575CF300062B2A /* OraCC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OraCC-Bridging-Header.h"; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -276,6 +277,7 @@
 				225C117C1E563CE500062B2A /* VariablePublish.swift */,
 				22CA521D1E52A0BF00038A12 /* Assets.xcassets */,
 				22CA52221E52A0BF00038A12 /* Info.plist */,
+				225C11B31E575CF300062B2A /* OraCC-Bridging-Header.h */,
 			);
 			path = OraCC;
 			sourceTree = "<group>";
@@ -360,6 +362,7 @@
 				TargetAttributes = {
 					22CA52121E52A0BF00038A12 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					22CA52261E52A0BF00038A12 = {
@@ -707,10 +710,13 @@
 			baseConfigurationReference = 42BA950D781316503C1DCEFE /* Pods-OraCC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OraCC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Software.OraCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OraCC/OraCC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -721,10 +727,12 @@
 			baseConfigurationReference = 04D5AF771864B6B2E23AE213 /* Pods-OraCC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = OraCC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Software.OraCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OraCC/OraCC-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -1,5 +1,6 @@
 import UIKit
 import Moya
+import UIScrollView_InfiniteScroll
 
 class ChatsViewController: UITableViewController {
 
@@ -11,7 +12,40 @@ class ChatsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.loadCurrentPage()
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(reload(_:)), for: .valueChanged)
+        
+        tableView.infiniteScrollIndicatorMargin = 40
+        tableView.infiniteScrollTriggerOffset = 500
+        
+        tableView.addInfiniteScroll { [weak self] _ in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.viewModel.loadNextPage()
+        }
+        
+        viewModel.endOfChats.asObservable().bindNext{[weak self] isEnd in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.tableView.setShouldShowInfiniteScrollHandler{ _ in return !isEnd}
+            }.addDisposableTo(rx_disposeBag)
+        
+        
+        viewModel.shouldReload.asObservable().bindNext{ [weak self] indexes in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.tableView.reloadData()
+            strongSelf.tableView.finishInfiniteScroll()
+            strongSelf.refreshControl?.endRefreshing()
+            
+            }.addDisposableTo(rx_disposeBag)
+        
+        tableView.beginInfiniteScroll(true)
+    }
+    
+    func reload(_ sender: Any) {
+        viewModel.reload()
+        viewModel.loadNextPage()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
