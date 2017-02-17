@@ -9,7 +9,7 @@ class SplashViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if let _ = AuthenticationToken.token {
-            performSegue(withIdentifier: R.segue.splashViewController.from_Splash_to_Chats, sender: nil)
+            performSegue(withIdentifier: R.segue.splashViewController.from_Splash_to_Main, sender: nil)
         } else {
             performSegue(withIdentifier: R.segue.splashViewController.from_Splash_to_Login, sender: nil)
         }
@@ -22,6 +22,18 @@ class SplashViewController: UIViewController {
                 let nVC = segue.destination as! UINavigationController
                 let lVC = nVC.topViewController as! LoginViewController
                 lVC.provider = provider
+            }
+        }
+        
+        if segue.identifier == R.segue.splashViewController.from_Splash_to_Main.identifier {
+            
+            if let tVC = segue.destination as? UITabBarController {
+                
+                if let nVC = tVC.viewControllers?[0] as? UINavigationController {
+                    if let cVC = nVC.topViewController as? ChatsViewController {
+                        cVC.provider = provider
+                    }
+                }
             }
         }
     }

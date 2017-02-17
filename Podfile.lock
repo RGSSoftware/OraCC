@@ -34,6 +34,7 @@ PODS:
     - RxSwift (~> 3.0)
   - SnapKit (3.1.2)
   - SVProgressHUD (2.1)
+  - SwiftyJSON (3.1.3)
   - UIColor_Hex_Swift (3.0.2)
 
 DEPENDENCIES:
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - RxSwiftExt (= 2.1.0)
   - SnapKit (= 3.1.2)
   - SVProgressHUD (= 2.1)
+  - SwiftyJSON (= 3.1.3)
   - UIColor_Hex_Swift (= 3.0.2)
 
 SPEC CHECKSUMS:
@@ -66,8 +68,9 @@ SPEC CHECKSUMS:
   RxSwiftExt: 492a6575cf6afabb8feeed3204bd0f9e2c695e67
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SVProgressHUD: 76eacbf6f547ee13b3b25e2fb42b52d4cad76112
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   UIColor_Hex_Swift: 95f718452092a3efc8a827dffd2c04d3237be02d
 
-PODFILE CHECKSUM: 9f75bb57ab7b69e6a1113557073f2900ec7db605
+PODFILE CHECKSUM: 928071ccb038881b2d68cc6735c8cbce5347f28b
 
 COCOAPODS: 1.1.1

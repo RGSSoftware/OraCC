@@ -7,6 +7,8 @@ let StubOraProvider = RxMoyaProvider<OraAPI>(stubClosure: MoyaProvider.immediate
 enum OraAPI {
     case login(email: String, password: String)
     case register(name: String, email: String, password: String, passwordConfirmation: String)
+    
+    case chats(page: Int, pageSize: Int)
 }
 
 extension OraAPI : TargetType {
@@ -20,6 +22,8 @@ extension OraAPI : TargetType {
             return "/auth/login"
         case .register:
             return "/users"
+        case .chats:
+            return "/chats"
         }
     }
     
@@ -29,6 +33,8 @@ extension OraAPI : TargetType {
             return ["email": email, "password": password]
         case .register(let name, let email, let password, let passwordConfirmation):
             return ["name": name, "email": email, "password": password, "password_confirmation": passwordConfirmation]
+        case .chats(let page, let pageSize):
+            return ["page": page, "limit": pageSize]
         }
     }
     
@@ -41,6 +47,8 @@ extension OraAPI : TargetType {
         case .login,
              .register:
             return .post
+        case .chats:
+            return .get
         }
     }
     
@@ -50,6 +58,8 @@ extension OraAPI : TargetType {
             return stubbedResponse("Login_Sample_Data")
         case .register:
             return stubbedResponse("Register_Sample_Data")
+        case .chats:
+            return stubbedResponse("Chats_Sample_Data")
         }
     }
     
@@ -58,6 +68,8 @@ extension OraAPI : TargetType {
         case .login,
              .register:
             return JSONEncoding.default
+        default:
+            return URLEncoding.default
         }
     }
 }

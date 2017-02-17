@@ -21,12 +21,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 2 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
+    /// Resource file `Chats_Sample_Data.json`.
+    static let chats_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Chats_Sample_Data", pathExtension: "json")
     /// Resource file `Login_Sample_Data.json`.
     static let login_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Login_Sample_Data", pathExtension: "json")
     /// Resource file `Register_Sample_Data.json`.
     static let register_Sample_DataJson = Rswift.FileResource(bundle: R.hostingBundle, name: "Register_Sample_Data", pathExtension: "json")
+    
+    /// `bundle.url(forResource: "Chats_Sample_Data", withExtension: "json")`
+    static func chats_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.chats_Sample_DataJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
     
     /// `bundle.url(forResource: "Login_Sample_Data", withExtension: "json")`
     static func login_Sample_DataJson(_: Void = ()) -> Foundation.URL? {
@@ -80,10 +88,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 3 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `ChatCell`.
+    static let chatCell: Rswift.ReuseIdentifier<ChatCell> = Rswift.ReuseIdentifier(identifier: "ChatCell")
     /// Reuse identifier `FieldCell`.
     static let fieldCell: Rswift.ReuseIdentifier<FieldCell> = Rswift.ReuseIdentifier(identifier: "FieldCell")
+    /// Reuse identifier `HeaderCell`.
+    static let headerCell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "HeaderCell")
     
     fileprivate init() {}
   }
@@ -107,23 +119,23 @@ struct R: Rswift.Validatable {
     
     /// This struct is generated for `SplashViewController`, and contains static references to 2 segues.
     struct splashViewController {
-      /// Segue identifier `from_Splash_to_Chats`.
-      static let from_Splash_to_Chats: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UITabBarController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Splash_to_Chats")
       /// Segue identifier `from_Splash_to_Login`.
       static let from_Splash_to_Login: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UINavigationController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Splash_to_Login")
-      
-      /// Optionally returns a typed version of segue `from_Splash_to_Chats`.
-      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
-      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
-      static func from_Splash_to_Chats(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UITabBarController>? {
-        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.splashViewController.from_Splash_to_Chats, segue: segue)
-      }
+      /// Segue identifier `from_Splash_to_Main`.
+      static let from_Splash_to_Main: Rswift.StoryboardSegueIdentifier<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UITabBarController> = Rswift.StoryboardSegueIdentifier(identifier: "from_Splash_to_Main")
       
       /// Optionally returns a typed version of segue `from_Splash_to_Login`.
       /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
       /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
       static func from_Splash_to_Login(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UINavigationController>? {
         return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.splashViewController.from_Splash_to_Login, segue: segue)
+      }
+      
+      /// Optionally returns a typed version of segue `from_Splash_to_Main`.
+      /// Returns nil if either the segue identifier, the source, destination, or segue types don't match.
+      /// For use inside `prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)`.
+      static func from_Splash_to_Main(segue: UIKit.UIStoryboardSegue) -> Rswift.TypedStoryboardSegueInfo<UIKit.UIStoryboardSegue, SplashViewController, UIKit.UITabBarController>? {
+        return Rswift.TypedStoryboardSegueInfo(segueIdentifier: R.segue.splashViewController.from_Splash_to_Main, segue: segue)
       }
       
       fileprivate init() {}

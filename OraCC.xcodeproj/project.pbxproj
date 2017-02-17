@@ -23,6 +23,14 @@
 		225C116F1E55630200062B2A /* UITableView+Exten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C116E1E55630200062B2A /* UITableView+Exten.swift */; };
 		225C11711E556A9400062B2A /* ResponseStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11701E556A9400062B2A /* ResponseStatusCode.swift */; };
 		225C11731E56163500062B2A /* OraBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11721E56163500062B2A /* OraBrand.swift */; };
+		225C11751E5634BE00062B2A /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11741E5634BE00062B2A /* ChatsViewController.swift */; };
+		225C11771E56351800062B2A /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11761E56351800062B2A /* ChatsViewModel.swift */; };
+		225C11791E56364300062B2A /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11781E56364300062B2A /* Chat.swift */; };
+		225C117B1E563C3E00062B2A /* Observable+VariablePublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C117A1E563C3E00062B2A /* Observable+VariablePublish.swift */; };
+		225C117D1E563CE500062B2A /* VariablePublish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C117C1E563CE500062B2A /* VariablePublish.swift */; };
+		225C117F1E56485100062B2A /* Chats_Sample_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 225C117E1E56485100062B2A /* Chats_Sample_Data.json */; };
+		225C11811E56788C00062B2A /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11801E56788C00062B2A /* ChatViewModel.swift */; };
+		225C11831E567BE500062B2A /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C11821E567BE500062B2A /* ChatCell.swift */; };
 		2260A8A21E54B58E0083D59E /* EmailValidatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */; };
 		2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */; };
 		2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8A51E54B7D00083D59E /* EmailValidator.swift */; };
@@ -76,6 +84,14 @@
 		225C116E1E55630200062B2A /* UITableView+Exten.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Exten.swift"; sourceTree = "<group>"; };
 		225C11701E556A9400062B2A /* ResponseStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseStatusCode.swift; sourceTree = "<group>"; };
 		225C11721E56163500062B2A /* OraBrand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OraBrand.swift; sourceTree = "<group>"; };
+		225C11741E5634BE00062B2A /* ChatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		225C11761E56351800062B2A /* ChatsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
+		225C11781E56364300062B2A /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		225C117A1E563C3E00062B2A /* Observable+VariablePublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+VariablePublish.swift"; sourceTree = "<group>"; };
+		225C117C1E563CE500062B2A /* VariablePublish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariablePublish.swift; sourceTree = "<group>"; };
+		225C117E1E56485100062B2A /* Chats_Sample_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Chats_Sample_Data.json; sourceTree = "<group>"; };
+		225C11801E56788C00062B2A /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		225C11821E567BE500062B2A /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		2260A8A11E54B58E0083D59E /* EmailValidatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpec.swift; sourceTree = "<group>"; };
 		2260A8A31E54B78E0083D59E /* ValidatorRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidatorRepresentable.swift; sourceTree = "<group>"; };
 		2260A8A51E54B7D00083D59E /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -151,6 +167,7 @@
 		225C115A1E554AB500062B2A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				225C117A1E563C3E00062B2A /* Observable+VariablePublish.swift */,
 				225C11551E54FECE00062B2A /* Sequence+Exten.swift */,
 				225C11511E54F03900062B2A /* UIViewControllerExtensions.swift */,
 				225C116E1E55630200062B2A /* UITableView+Exten.swift */,
@@ -161,6 +178,8 @@
 		225C115B1E554ACE00062B2A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				225C11801E56788C00062B2A /* ChatViewModel.swift */,
+				225C11761E56351800062B2A /* ChatsViewModel.swift */,
 				225C11681E555C0B00062B2A /* FormViewModel.swift */,
 				2260A8AC1E54C30F0083D59E /* LoginViewModel.swift */,
 				225C116A1E555C2C00062B2A /* FieldViewModel.swift */,
@@ -172,6 +191,7 @@
 		225C115C1E554B0F00062B2A /* Sample Data */ = {
 			isa = PBXGroup;
 			children = (
+				225C117E1E56485100062B2A /* Chats_Sample_Data.json */,
 				2260A8B71E54C7060083D59E /* Login_Sample_Data.json */,
 				225C11571E5548CC00062B2A /* Register_Sample_Data.json */,
 			);
@@ -210,6 +230,8 @@
 		22CA52151E52A0BF00038A12 /* OraCC */ = {
 			isa = PBXGroup;
 			children = (
+				225C11821E567BE500062B2A /* ChatCell.swift */,
+				225C11781E56364300062B2A /* Chat.swift */,
 				225C11721E56163500062B2A /* OraBrand.swift */,
 				22CA52161E52A0BF00038A12 /* AppDelegate.swift */,
 				225C115A1E554AB500062B2A /* Extensions */,
@@ -225,10 +247,12 @@
 				225C115E1E554BF700062B2A /* RegisterForm.swift */,
 				2260A8B11E54C4070083D59E /* Field.swift */,
 				2260A8AF1E54C31D0083D59E /* FieldCell.swift */,
+				225C11741E5634BE00062B2A /* ChatsViewController.swift */,
 				225C116C1E555E8F00062B2A /* RegisterViewController.swift */,
 				2260A8AB1E54C30F0083D59E /* LoginViewController.swift */,
 				22CA525D1E538B6800038A12 /* SplashViewController.swift */,
 				22CA525F1E5393DC00038A12 /* AuthenticationToken.swift */,
+				225C117C1E563CE500062B2A /* VariablePublish.swift */,
 				22CA521D1E52A0BF00038A12 /* Assets.xcassets */,
 				22CA52221E52A0BF00038A12 /* Info.plist */,
 			);
@@ -354,6 +378,7 @@
 				22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */,
 				22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */,
 				225C11581E5548CC00062B2A /* Register_Sample_Data.json in Resources */,
+				225C117F1E56485100062B2A /* Chats_Sample_Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,19 +504,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				2260A8A81E54BA750083D59E /* PasswordValidator.swift in Sources */,
+				225C117B1E563C3E00062B2A /* Observable+VariablePublish.swift in Sources */,
 				225C116D1E555E8F00062B2A /* RegisterViewController.swift in Sources */,
 				2260A8A41E54B78E0083D59E /* ValidatorRepresentable.swift in Sources */,
 				2260A8A61E54B7D00083D59E /* EmailValidator.swift in Sources */,
+				225C117D1E563CE500062B2A /* VariablePublish.swift in Sources */,
+				225C11811E56788C00062B2A /* ChatViewModel.swift in Sources */,
+				225C11751E5634BE00062B2A /* ChatsViewController.swift in Sources */,
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
+				225C11831E567BE500062B2A /* ChatCell.swift in Sources */,
 				2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */,
 				22CA52601E5393DC00038A12 /* AuthenticationToken.swift in Sources */,
 				225C115F1E554BF700062B2A /* RegisterForm.swift in Sources */,
+				225C11791E56364300062B2A /* Chat.swift in Sources */,
 				225C11731E56163500062B2A /* OraBrand.swift in Sources */,
 				225C11521E54F03900062B2A /* UIViewControllerExtensions.swift in Sources */,
 				225C11711E556A9400062B2A /* ResponseStatusCode.swift in Sources */,
 				225C11671E55592800062B2A /* RegisterViewModel.swift in Sources */,
 				22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */,
 				225C11691E555C0B00062B2A /* FormViewModel.swift in Sources */,
+				225C11771E56351800062B2A /* ChatsViewModel.swift in Sources */,
 				2260A8B41E54C4280083D59E /* LoginForm.swift in Sources */,
 				2260A8B61E54C4E70083D59E /* OraAPI.swift in Sources */,
 				22CA52651E53B09700038A12 /* R.generated.swift in Sources */,
