@@ -1,6 +1,7 @@
 import UIKit
 import Moya
 import JSQMessagesViewController
+import SVProgressHUD
 
 class ChatViewController: JSQMessagesViewController {
     
@@ -39,6 +40,46 @@ class ChatViewController: JSQMessagesViewController {
         
         collectionView?.register(MessageCellOutgoing.nib(), forCellWithReuseIdentifier: MessageCellOutgoing.cellReuseIdentifier())
         collectionView?.register(MessageCellIngoing.nib(), forCellWithReuseIdentifier: MessageCellIngoing.cellReuseIdentifier())
+        
+        showLoadEarlierMessagesHeader = true
+        if let color = OraBrand.mainColor {
+            collectionView?.loadEarlierMessagesHeaderTextColor = color
+        }
+        
+        collectionView?.refreshControl = UIRefreshControl()
+        collectionView?.refreshControl?.addTarget(self, action: #selector(reload(_:)), for: .valueChanged)
+        
+        viewModel.showSpinner.asObservable().subscribe(onNext:{
+            if $0 {
+                SVProgressHUD.show()
+            } else {
+                SVProgressHUD.dismiss()
+            }
+            
+        }).addDisposableTo(rx_disposeBag)
+        
+        viewModel.shouldReload.asObservable().bindNext{ [weak self] indexes in
+            guard let strongSelf = self else { return }
+            
+            strongSelf.collectionView?.reloadData()
+            strongSelf.collectionView?.refreshControl?.endRefreshing()
+            
+            }.addDisposableTo(rx_disposeBag)
+        
+        viewModel.showMessage.subscribe(onNext:{ [weak self] message in
+            let alert = UIAlertController(title: message.title, message: message.body, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            
+            self?.present(alert, animated: true){}
+            
+        }).addDisposableTo(rx_disposeBag)
+        
+    }
+    
+    func reload(_ sender: Any) {
+        viewModel.reload()
+        viewModel.loadCurrentPage()
     }
     
     override func senderId() -> String {
@@ -83,6 +124,10 @@ class ChatViewController: JSQMessagesViewController {
     override func collectionView(_ collectionView: JSQMessagesCollectionView, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout, heightForMessageBubbleTopLabelAt indexPath: IndexPath) -> CGFloat {
         
         return 0.0
+    }
+    
+    override func collectionView(_ collectionView: JSQMessagesCollectionView, header headerView: JSQMessagesLoadEarlierHeaderView, didTapLoadEarlierMessagesButton sender: UIButton) {
+        viewModel.loadNextPage()
     }
 
 }

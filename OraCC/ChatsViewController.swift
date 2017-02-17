@@ -18,6 +18,15 @@ class ChatsViewController: UITableViewController {
         tableView.infiniteScrollIndicatorMargin = 40
         tableView.infiniteScrollTriggerOffset = 500
         
+        viewModel.showMessage.subscribe(onNext:{ [weak self] message in
+            let alert = UIAlertController(title: message.title, message: message.body, preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            
+            self?.present(alert, animated: true){}
+            
+        }).addDisposableTo(rx_disposeBag)
+        
         tableView.addInfiniteScroll { [weak self] _ in
             guard let strongSelf = self else { return }
             
