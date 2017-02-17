@@ -32,7 +32,7 @@ class RegisterViewModel: NSObject {
     func register() {
         if !formViewModel.form.isValid{
             if let field = formViewModel.form.firstInvalidField() {
-                showMessage.onNext(Message(title: field.label, body: field.validator.errorMessage))
+                return showMessage.onNext(Message(title: field.label, body: field.validator.errorMessage))
             }
         } else {
             let password = formViewModel.form.field(.password)!.value!
@@ -61,7 +61,21 @@ class RegisterViewModel: NSObject {
                         }
                     }
                     
-                    self?.didRegisterSuccessful.onNext()
+                    do {
+                        let json = try response.mapJSON() as? [String: Any]
+                        let data = json?["data"] as? [String: Any]
+                        
+                        if let data = data {
+                            let user = User.fromJSON(data)
+                            User.setCurrentUser(user)
+                            self?.didRegisterSuccessful.onNext()
+                        } else {
+                            self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                        }
+                        
+                    } catch {
+                        self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                    }
                     
                 case .clientError:
                     self?.showMessage.onNext(Message(title: "Register Error", body: "Please check your submitted info and try again."))
@@ -72,6 +86,12 @@ class RegisterViewModel: NSObject {
                 default:()
                 }
 
+            }, onError:{ [weak self] error in
+                guard let strongSelf = self else { return }
+                
+                strongSelf.showSpinner.onNext(false)
+                
+                strongSelf.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
             }).addDisposableTo(rx_disposeBag)
         }
     }
