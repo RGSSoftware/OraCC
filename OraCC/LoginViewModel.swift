@@ -3,11 +3,6 @@ import Moya
 import RxSwift
 import NSObject_Rx
 
-struct Message {
-    let title: String
-    let body: String?
-}
-
 class LoginViewModel: NSObject {
     internal let provider: RxMoyaProvider<OraAPI>
     
@@ -78,19 +73,19 @@ class LoginViewModel: NSObject {
                         User.setCurrentUser(user)
                         self?.didLoginSuccessful.onNext()
                     } else {
-                        self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                        self?.showMessage.onNext(Message.networkError())
                     }
                     
                 } catch {
-                    self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                    self?.showMessage.onNext(Message.networkError())
                 }
                 
             case .clientError:
-                self?.showMessage.onNext(Message(title: "Register Error", body: "Please check your submitted info and try again."))
+                self?.showMessage.onNext(Message.loginError())
             case .serverError,
                  .informational,
                  .undefined:
-                self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                self?.showMessage.onNext(Message.networkError())
             default:()
             }
             
@@ -99,7 +94,7 @@ class LoginViewModel: NSObject {
             
             strongSelf.showSpinner.onNext(false)
             
-            strongSelf.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+            strongSelf.showMessage.onNext(Message.networkError())
                 
         }).addDisposableTo(rx_disposeBag)
     }

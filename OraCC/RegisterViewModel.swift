@@ -70,19 +70,19 @@ class RegisterViewModel: NSObject {
                             User.setCurrentUser(user)
                             self?.didRegisterSuccessful.onNext()
                         } else {
-                            self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                            self?.showMessage.onNext(Message.networkError())
                         }
                         
                     } catch {
-                        self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                        self?.showMessage.onNext(Message.networkError())
                     }
                     
                 case .clientError:
-                    self?.showMessage.onNext(Message(title: "Register Error", body: "Please check your submitted info and try again."))
+                    self?.showMessage.onNext(Message.registerError())
                 case .serverError,
                      .informational,
                      .undefined:
-                    self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                    self?.showMessage.onNext(Message.networkError())
                 default:()
                 }
 
@@ -91,7 +91,7 @@ class RegisterViewModel: NSObject {
                 
                 strongSelf.showSpinner.onNext(false)
                 
-                strongSelf.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                strongSelf.showMessage.onNext(Message.networkError())
             }).addDisposableTo(rx_disposeBag)
         }
     }

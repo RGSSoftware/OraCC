@@ -78,19 +78,19 @@ class AccountViewModel: NSObject {
                         self?.addUserToForm(user)
                         self?.didSaveSuccessful.onNext()
                     } else {
-                        self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                        self?.showMessage.onNext(Message.networkError())
                     }
                     
                 } catch {
-                    self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                    self?.showMessage.onNext(Message.networkError())
                 }
                 
             case .clientError:
-                self?.showMessage.onNext(Message(title: "Save Error", body: "Please check your submitted info and try again."))
+                self?.showMessage.onNext(Message.saveFormError())
             case .serverError,
                  .informational,
                  .undefined:
-                self?.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                self?.showMessage.onNext(Message.networkError())
             default:()
             }
             
@@ -99,7 +99,7 @@ class AccountViewModel: NSObject {
                 
                 strongSelf.showSpinner.onNext(false)
                 
-                strongSelf.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                strongSelf.showMessage.onNext(Message.networkError())
                 
         }).addDisposableTo(rx_disposeBag)
     }

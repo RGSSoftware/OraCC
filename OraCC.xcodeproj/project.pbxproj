@@ -57,6 +57,7 @@
 		2260A8B41E54C4280083D59E /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8B31E54C4280083D59E /* LoginForm.swift */; };
 		2260A8B61E54C4E70083D59E /* OraAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2260A8B51E54C4E70083D59E /* OraAPI.swift */; };
 		2260A8B81E54C7060083D59E /* Login_Sample_Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2260A8B71E54C7060083D59E /* Login_Sample_Data.json */; };
+		22C1AE491E57CAD900889C05 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C1AE481E57CAD900889C05 /* Message.swift */; };
 		22CA52171E52A0BF00038A12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA52161E52A0BF00038A12 /* AppDelegate.swift */; };
 		22CA521C1E52A0BF00038A12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521A1E52A0BF00038A12 /* Main.storyboard */; };
 		22CA521E1E52A0BF00038A12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22CA521D1E52A0BF00038A12 /* Assets.xcassets */; };
@@ -133,6 +134,7 @@
 		2260A8B31E54C4280083D59E /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
 		2260A8B51E54C4E70083D59E /* OraAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OraAPI.swift; sourceTree = "<group>"; };
 		2260A8B71E54C7060083D59E /* Login_Sample_Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Login_Sample_Data.json; sourceTree = "<group>"; };
+		22C1AE481E57CAD900889C05 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		22CA52131E52A0BF00038A12 /* OraCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OraCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CA52161E52A0BF00038A12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22CA521B1E52A0BF00038A12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				22C1AE451E57AF3200889C05 /* Forms */,
 				225C115D1E554B2800062B2A /* Storyboard */,
 				225C115C1E554B0F00062B2A /* Sample Data */,
+				22C1AE481E57CAD900889C05 /* Message.swift */,
 				225C11701E556A9400062B2A /* ResponseStatusCode.swift */,
 				225C11981E56E22000062B2A /* MessageCellOutgoing.xib */,
 				225C11991E56E22000062B2A /* MessgeCellIncoming.xib */,
@@ -578,6 +581,7 @@
 				225C11811E56788C00062B2A /* ChatViewModel.swift in Sources */,
 				225C11751E5634BE00062B2A /* ChatsViewController.swift in Sources */,
 				22CA525E1E538B6800038A12 /* SplashViewController.swift in Sources */,
+				22C1AE491E57CAD900889C05 /* Message.swift in Sources */,
 				225C11BD1E57891F00062B2A /* AccountViewModel.swift in Sources */,
 				225C11831E567BE500062B2A /* ChatCell.swift in Sources */,
 				2260A8AD1E54C30F0083D59E /* LoginViewController.swift in Sources */,

@@ -102,7 +102,7 @@ class ChatMessagesViewModel: NSObject {
                     strongSelf.endOfMessages = true
                     strongSelf.shouldReload.onNext()
                     
-                    strongSelf.showMessage.onNext(Message(title: "Network Error", body: "Please try later."))
+                    strongSelf.showMessage.onNext(Message.networkError())
                     
             })
             .addDisposableTo(rx_disposeBag)
