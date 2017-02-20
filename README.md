@@ -20,3 +20,6 @@ A few things are missing because I didn’t see an API or UX spec for those feat
 - There’s a lot of code duplication, but in time it should be refactored out.
 - Test coverage
 - A lot more.
+
+### Summary:
+In summary, I've should have spent my time on code quality then fancy showboating.
